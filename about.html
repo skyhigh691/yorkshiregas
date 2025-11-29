@@ -116,8 +116,8 @@
             <img src="assets/images/logo.png" class="h-[100px]" />
           </div>
           <ul class="flex gap-8 justify-end ml-[30px] redhat font-bold w-[60%]">
-            <li>HOME</li>
-            <a href="about.html">ABOUT</a>
+            <a href="index.html">HOME</a>
+            <li>ABOUT</li>
             <li>OUR SERVICES</li>
             <li>OUR GALLERY</li>
             <a href="contact.html">CONTACT US</a>
@@ -136,7 +136,7 @@
       <!--banner-->
 
       <div
-        class="bg-cover relative bg-center bg-[url('assets/images/bannerimage.jpg')] w-full h-[80vh]"
+        class="bg-cover relative bg-center bg-[url('assets/images/bannerimage.jpg')] w-full h-[50vh]"
       >
         <img
           src="assets/images/bannershape.png"
@@ -147,22 +147,8 @@
           style="clip-path: polygon(0 0, 100% 0%, 81% 100%, 0% 100%)"
         >
           <h1 class="text-6xl radio ml-[-90px] text-white">
-            Welcome To Our Gas And <br />
-            Heating Services
+            Know About Us <br />
           </h1>
-          <p class="ml-[-80px] text-white mt-5">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been <br />
-            the industry's standard dummy. the industry's standard dummy.
-          </p>
-          <div class="w-full mt-10">
-            <a
-              class="h-[60px] ml-[110px] text-2xl radio text-white font-bold gap-3 w-[220px] border-[3px] border-white shadow-xl flex justify-center items-center rounded-[40px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A]"
-            >
-              <img src="assets/images/call.png" class="h-8" />
-              Book Now
-            </a>
-          </div>
         </div>
       </div>
     </div>
@@ -181,7 +167,7 @@
             </div>
           </div>
           <p class="text-[#F94C2C] raleway text-[22px] pt-2 font-bold">
-            Book A Service
+            10 Year + Exp
           </p>
         </div>
         <div class="flex flex-col items-center">
@@ -195,7 +181,7 @@
             </div>
           </div>
           <p class="text-[#F94C2C] raleway text-[22px] pt-2 font-bold">
-            Free Quote
+            500+ Projects
           </p>
         </div>
         <div class="flex flex-col items-center">
@@ -209,7 +195,7 @@
             </div>
           </div>
           <p class="text-[#F94C2C] raleway text-[22px] pt-2 font-bold">
-            Special Offer
+            300 + Clients
           </p>
         </div>
         <div class="flex flex-col items-center">
@@ -225,16 +211,23 @@
           <p
             class="text-[#F94C2C] text-center raleway text-[22px] pt-2 font-bold"
           >
-            Call Out Emergency Services
+            100% Happy Client
           </p>
         </div>
       </div>
     </div>
     <!--circle section end here -->
-    <div class="flex w-full">
-      <div
-        class="w-[50%] bg-center bg-cover bg-[url('assets/images/aboutusimage.jpg')]"
-      ></div>
+    <div class="flex w-full bg-[#063152]">
+      <div class="w-[50%] relative">
+        <img
+          src="assets/images/aboutusimage.jpg"
+          class="w-[100%] border-t-[3px] border-r-[3px] border-b-[1px] border-[#F94C2C] border-l-[3px] border-t-[#F94C2C] border-r-[#F94C2C] border-l-[#F94C2C] h-[60%]"
+        />
+        <img
+          src="assets/images/aboutusimage.jpg"
+          class="w-[70%] absolute h-[40%] mt-[-100px] ml-[100px]"
+        />
+      </div>
       <div class="w-[50%] bg-[#063152] relative py-10">
         <p class="radio text-[#F94C2C] mt-10 text-[20px] ml-[30px]">About Us</p>
         <h2 class="ml-[30px] text-[50px] leading-tight text-white">
@@ -279,241 +272,55 @@
       </div>
     </div>
 
-    <!---form -->
-    <div
-      class="w-full py-14 bg-center bg-cover bg-[url('assets/images/ctabanner.jpg')] relative flex flex-col items-center"
+    <!----cta section -->
+    <section
+      class="bg-[url('assets/images/bannerimage.jpg')] bg-fixed bg-center bg-cover relative font-inter"
     >
-      <!-- Overlay -->
       <div class="absolute inset-0 bg-black/70"></div>
 
-      <!-- Content -->
-      <div class="relative z-10 w-[90%] lg:w-[80%]">
-        <h4
-          class="text-[38px] raleway font-semibold text-white text-center mb-10"
-        >
-          Book Now For Your Services
-        </h4>
-
-        <!-- FORM GRID -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-white">
-          <!-- Name -->
-          <div class="relative">
-            <input
-              type="text"
-              placeholder="Name"
-              class="w-full px-5 py-3 bg-transparent border border-white/60 rounded-md outline-none placeholder-white"
-            />
-          </div>
-
-          <!-- Email -->
-          <div class="relative">
-            <input
-              type="email"
-              placeholder="Your Email"
-              class="w-full px-5 py-3 bg-transparent border border-white/60 rounded-md outline-none placeholder-white"
-            />
-          </div>
-
-          <!-- Phone -->
-          <div class="relative">
-            <input
-              type="text"
-              placeholder="Phone No."
-              class="w-full px-5 py-3 bg-transparent border border-white/60 rounded-md outline-none placeholder-white"
-            />
-          </div>
-
-          <!-- Service Type -->
-          <div class="relative">
-            <select
-              class="w-full px-5 py-3 bg-transparent border border-white/60 rounded-md outline-none text-white"
-            >
-              <option class="text-black">Plumbing</option>
-              <option class="text-black">AC Repair</option>
-              <option class="text-black">Electrical</option>
-              <option class="text-black">Installation</option>
-            </select>
-          </div>
-
-          <!-- Message -->
-          <div class="relative md:col-span-1">
-            <input
-              type="text"
-              placeholder="Message"
-              class="w-full px-5 py-3 bg-transparent border border-white/60 rounded-md outline-none placeholder-white"
-            />
-          </div>
-
-          <!-- Submit -->
-          <button
-            class="w-full h-[55px] text-[25px] border-[3px] border-white bg-[#f94c2c] text-white font-semibold rounded-full shadow-[0_0_12px_#f94c2c] border border-[#ffffff40] flex items-center justify-center tracking-wide hover:bg-[#d13c20] transition"
-          >
-            SUBMIT
-          </button>
-        </div>
-      </div>
-    </div>
-    <section class="w-full py-16 flex justify-center items-center bg-white">
-      <div class="w-[85%] mx-auto">
-        <!-- Top Heading -->
-        <p class="text-[#F94C2C] text-center font-bold text-[20px]">
-          Our Services
-        </p>
-
-        <h3
-          class="text-center text-[#033257] text-[36px] font-bold leading-tight mt-2"
-        >
-          Welcome To Our Gas And<br />Heating Services
-        </h3>
-
-        <p class="text-center text-[18px] mt-3 text-gray-600">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been <br />
-          the industry's standard dummy.
-        </p>
-
-        <!-- Cards Row -->
-        <div class="w-full mt-10 flex justify-center">
-          <div class="flex gap-16">
-            <!-- CARD 1 -->
-            <div
-              class="w-[300px] rounded-[20px] h-[450px] bg-center bg-cover relative overflow-hidden shadow-lg"
-              style="background-image: url('assets/images/aboutusimage.jpg')"
-            >
-              <!-- Red overlay -->
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-[#F94C2C]/80 to-transparent rounded-[20px]"
-              ></div>
-
-              <!-- Shape Image -->
-              <img
-                src="assets/images/serviceshape.png"
-                class="absolute bottom-0 w-full z-[5]"
-              />
-
-              <!-- Content -->
-              <div class="absolute bottom-6 left-6 z-[10]">
-                <p class="text-white text-[22px] font-bold mb-2">
-                  Gas Leak Detection
-                </p>
-
-                <div class="flex items-center gap-2 text-white cursor-pointer">
-                  <img src="assets/images/readmorearrow.png" class="h-10" />
-                  <span class="font-semibold">READ MORE</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD 2 -->
-            <div
-              class="w-[300px] rounded-[20px] h-[450px] bg-center bg-cover relative overflow-hidden shadow-lg"
-              style="background-image: url('assets/images/aboutusimage.jpg')"
-            >
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-[#F94C2C]/80 to-transparent rounded-[20px]"
-              ></div>
-              <img
-                src="assets/images/serviceshape.png"
-                class="absolute bottom-0 w-full z-[5]"
-              />
-
-              <div class="absolute bottom-6 left-6 z-[10]">
-                <p class="text-white radio text-[22px] font-bold mb-2">
-                  Gas Appliances Installation
-                </p>
-
-                <div class="flex items-center gap-2 text-white cursor-pointer">
-                  <img src="assets/images/readmorearrow.png" class="h-10" />
-                  <span class="font-semibold">READ MORE</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD 3 -->
-            <div
-              class="w-[300px] rounded-[20px] h-[450px] bg-center bg-cover relative overflow-hidden shadow-lg"
-              style="background-image: url('assets/images/aboutusimage.jpg')"
-            >
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-[#F94C2C]/80 to-transparent rounded-[20px]"
-              ></div>
-              <img
-                src="assets/images/serviceshape.png"
-                class="absolute bottom-0 w-full z-[5]"
-              />
-
-              <div class="absolute bottom-6 left-6 z-[10]">
-                <p class="text-white text-[22px] font-bold mb-2">
-                  Gas Leak Detection
-                </p>
-
-                <div class="flex items-center gap-2 text-white cursor-pointer">
-                  <img src="assets/images/readmorearrow.png" class="h-10" />
-                  <span class="font-semibold">READ MORE</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!---cta-->
-    <section
-      class="w-full py-14 z-[10] bg-center bg-cover bg-[url('assets/images/ctabanner.jpg')] relative flex flex-col items-center"
-    >
-      <img
-        src="assets/images/ctashape.png"
-        class="absolute z-[12] top-0 right-0"
-      />
-      <!-- Bottom 24/7 + Wrench Image (Optional Floating Icon) -->
       <div
-        class="absolute z-[12] left-10 flex justify-center h-full w-[290px] bottom-0 hidden lg:block bg-[#F94C2CC4]"
-        style="clip-path: polygon(49% 0, 100% 0%, 52% 100%, 0% 100%)"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center min-h-[60vh]"
       >
-        <img
-          src="assets/images/247.png"
-          class="w-28 ml-[69px] mt-[180px] opacity-90"
-        />
-      </div>
-
-      <!-- Gradient Overlay -->
-      <div class="absolute inset-0 bg-[#03325794]"></div>
-
-      <!-- Content -->
-      <div class="relative z-10 w-[90%] lg:w-[80%] flex flex-col items-center">
-        <!-- Top Phone Icon -->
-        <div
-          class="w-16 h-16 rounded-full bg-[#c3432b] border border-white/50 flex justify-center items-center mb-4 backdrop-blur-sm shadow-lg"
-        >
-          <img src="assets/images/call.gif" class="w-12 h-12" />
-        </div>
-
-        <!-- Phone Number Box -->
-        <div
-          class="px-10 py-3 rounded-full border-2 border-white/60 text-white text-[26px] font-semibold shadow-[0_0_12px_#ffffff80] backdrop-blur-sm"
-        >
-          012 345 6789
-        </div>
-
-        <!-- Heading -->
-        <h2
-          class="text-white radio text-[32px] lg:text-[38px] font-semibold text-center mt-4"
-        >
-          Connect With Us For Your<br />Emergency Services
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 font-raleway text-white">
+          Ready to Book Your Journey?
         </h2>
+
+        <p class="text-xl text-gray-200 mb-8 max-w-2xl font-redhat">
+          Get a free, no-obligation quote today for any of our services. Our
+          team is ready to help you plan your perfect trip.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 items-center">
+          <a
+            href="#booking-form"
+            class="btn-hover bg-[#f94c2c] text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
+          >
+            Book Now <span class="arrow-box ml-2">→</span>
+          </a>
+
+          <a
+            href="https://wa.me/1223445454545"
+            target="_blank"
+            class="bg-white text-gray-900 font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center border-2 border-transparent hover:border-[#f94c2c]"
+          >
+            <i class="fab fa-whatsapp text-green-500 text-xl mr-2"></i>
+            WhatsApp Us
+          </a>
+        </div>
       </div>
     </section>
 
     <!---why choose us section -->
 
-    <div class="w-full mt-[200px] flex relative">
+    <div class="w-full mt-[100px] flex relative">
       <!-- LEFT CONTENT BOX -->
       <div
-        class="w-[80%] bg-[#fee9e5] rounded-[20px] shape relative overflow-hidden p-10 z-10"
+        class="w-[80%] bg-[#fee9e5] shape relative overflow-hidden p-10 z-10"
       >
-        <div class="relative z-10">
-          <p class="text-[#F94C2C] text-xl font-semibold">Why Choose Us ?</p>
+        <div class="relative z-10 ml-[40%]">
+          <p class="text-[#F94C2C] text-2xl pb-6 font-semibold">
+            Why Choose Us ?
+          </p>
 
           <h2 class="text-[#033257] text-[35px] font-bold leading-tight mb-6">
             Welcome To Our Gas And<br />Heating Services
@@ -572,7 +379,11 @@
 
       <!-- RIGHT IMAGE -->
       <div
-        class="absolute right-0 z-[12] top-[30%] translate-y-[-50%] w-[40%] h-[520px] rounded-[20px] bg-cover bg-center shadow-lg"
+        class="absolute right-0 z-[12] top-[45%] translate-y-[-50%] w-[23%] h-[520px] rounded-[20px] bg-cover bg-center shadow-lg"
+        style="background-image: url('assets/images/aboutusimage.jpg')"
+      ></div>
+      <div
+        class="absolute left-0 z-[12] top-[45%] translate-y-[-50%] w-[23%] h-[520px] rounded-[20px] bg-cover bg-center shadow-lg"
         style="background-image: url('assets/images/aboutusimage.jpg')"
       ></div>
     </div>
@@ -651,160 +462,7 @@
         </div>
       </div>
     </section>
-    <!---latest blog -->
-    <section class="py-16">
-      <!-- TOP TITLE -->
-      <div class="text-center mb-12">
-        <p class="text-[#f94c2c] text-[20px] font-semibold">Our Latest Blog</p>
-        <h2 class="text-4xl lg:text-5xl font-bold text-[#033257] leading-snug">
-          Welcome To Our Gas And <br />
-          Heating Services
-        </h2>
-      </div>
 
-      <!-- BLOG GRID -->
-      <div
-        class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-5"
-      >
-        <!-- CARD 1 -->
-        <div class="rounded-xl overflow-hidden bg-white">
-          <img
-            src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg"
-            class="w-full h-60 object-cover"
-          />
-
-          <div class="bg-[#F94C2C] w-[80%] p-6 rounded-t-2xl relative -mt-10">
-            <!-- DATE TAG -->
-            <span
-              class="absolute -top-4 left-4 bg-[#FFFFFF] text-[#F94C2C] text-sm px-4 py-1 rounded-full shadow"
-            >
-              July 27, 2025
-            </span>
-
-            <h3 class="text-white text-xl font-bold mt-6">
-              The Best Gas services Blog Is Here
-            </h3>
-
-            <p class="text-white mt-3 leading-relaxed text-[15px]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-
-            <p class="mt-5 font-semibold text-white cursor-pointer">
-              READ MORE
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD 2 (Same) -->
-        <div class="rounded-xl overflow-hidden bg-white">
-          <img
-            src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg"
-            class="w-full h-60 object-cover"
-          />
-
-          <div class="bg-[#F94C2C] w-[80%] p-6 rounded-t-2xl relative -mt-10">
-            <!-- DATE TAG -->
-            <span
-              class="absolute -top-4 left-4 bg-[#FFFFFF] text-[#F94C2C] text-sm px-4 py-1 rounded-full shadow"
-            >
-              July 27, 2025
-            </span>
-
-            <h3 class="text-white text-xl font-bold mt-6">
-              The Best Gas services Blog Is Here
-            </h3>
-
-            <p class="text-white mt-3 leading-relaxed text-[15px]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-
-            <p class="mt-5 font-semibold text-white cursor-pointer">
-              READ MORE
-            </p>
-          </div>
-        </div>
-
-        <!-- CARD 3 (Same) -->
-        <div class="rounded-xl overflow-hidden bg-white">
-          <img
-            src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg"
-            class="w-full h-60 object-cover"
-          />
-
-          <div class="bg-[#F94C2C] w-[80%] p-6 rounded-t-2xl relative -mt-10">
-            <!-- DATE TAG -->
-            <span
-              class="absolute -top-4 left-4 bg-[#FFFFFF] text-[#F94C2C] text-sm px-4 py-1 rounded-full shadow"
-            >
-              July 27, 2025
-            </span>
-
-            <h3 class="text-white text-xl font-bold mt-6">
-              The Best Gas services Blog Is Here
-            </h3>
-
-            <p class="text-white mt-3 leading-relaxed text-[15px]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
-            </p>
-
-            <p class="mt-5 font-semibold text-white cursor-pointer">
-              READ MORE
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!---city-->
-    <section class="py-16 bg-[#FFF2F2]">
-      <!-- HEADINGS -->
-      <div class="text-center mb-10">
-        <p class="text-[#f94c2c] text-[20px] pb-5 font-semibold">We Cover</p>
-        <h2
-          class="text-3xl md:text-4xl font-bold lg:text-4xl text-[#033257] leading-snug"
-        >
-          Welcome To Our Gas And <br />
-          Heating Services
-        </h2>
-      </div>
-
-      <!-- BUTTONS -->
-      <div class="flex flex-wrap justify-center gap-16 px-5">
-        <!-- BUTTON 1 -->
-        <button
-          class="bg-[#033257] text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2"
-        >
-          <span><img src="assets/images/location.png" class="h-6" /></span>
-          Bradford
-        </button>
-
-        <!-- BUTTON 2 -->
-        <button
-          class="bg-[#033257] text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2"
-        >
-          <span><img src="assets/images/location.png" class="h-6" /></span>
-          Bradford
-        </button>
-
-        <!-- BUTTON 3 -->
-        <button
-          class="bg-[#033257] text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2"
-        >
-          <span><img src="assets/images/location.png" class="h-6" /></span>
-          Bradford
-        </button>
-
-        <!-- BUTTON 4 -->
-        <button
-          class="bg-[#033257] text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2"
-        >
-          <span><img src="assets/images/location.png" class="h-6" /></span>
-          Bradford
-        </button>
-      </div>
-    </section>
     <footer class="footer-background bg-[#063559] pt-20">
       <div
         class="footer-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 text-white"
@@ -853,7 +511,7 @@
                 <i
                   class="fas fa-chevron-right text-red-500 text-xs mr-2 mt-1"
                 ></i>
-                <a href="about.html">About us</a>
+                <a href="#">About us</a>
               </li>
               <li
                 class="flex items-start text-gray-300 hover:text-red-500 transition duration-150"
