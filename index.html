@@ -118,8 +118,8 @@
           <ul class="flex gap-8 justify-end ml-[30px] redhat font-bold w-[60%]">
             <li>HOME</li>
             <a href="about.html">ABOUT</a>
-            <li>OUR SERVICES</li>
-            <li>OUR GALLERY</li>
+            <a href="service.html">OUR SERVICES</a>
+            <a href="gallery.html">OUR GALLERY</a>
             <a href="contact.html">CONTACT US</a>
             <a href="blog.html">BLOG</a>
           </ul>
@@ -353,6 +353,7 @@
         </div>
       </div>
     </div>
+
     <section class="w-full py-16 flex justify-center items-center bg-white">
       <div class="w-[85%] mx-auto">
         <!-- Top Heading -->
@@ -466,6 +467,11 @@
         src="assets/images/ctashape.png"
         class="absolute z-[12] top-0 right-0"
       />
+
+      <img
+        src="assets/images/ctashadow.png"
+        class="absolute z-[12] bottom-0 left-0"
+      />
       <!-- Bottom 24/7 + Wrench Image (Optional Floating Icon) -->
       <div
         class="absolute z-[12] left-10 flex justify-center h-full w-[290px] bottom-0 hidden lg:block bg-[#F94C2CC4]"
@@ -473,7 +479,7 @@
       >
         <img
           src="assets/images/247.png"
-          class="w-28 ml-[69px] mt-[180px] opacity-90"
+          class="w-28 ml-[74px] mt-[120px] opacity-90"
         />
       </div>
 
@@ -481,19 +487,21 @@
       <div class="absolute inset-0 bg-[#03325794]"></div>
 
       <!-- Content -->
-      <div class="relative z-10 w-[90%] lg:w-[80%] flex flex-col items-center">
+      <div
+        class="relative flex z-10 w-[90%] lg:w-[80%] flex flex-col items-center"
+      >
         <!-- Top Phone Icon -->
-        <div
-          class="w-16 h-16 rounded-full bg-[#c3432b] border border-white/50 flex justify-center items-center mb-4 backdrop-blur-sm shadow-lg"
-        >
-          <img src="assets/images/call.gif" class="w-12 h-12" />
-        </div>
 
         <!-- Phone Number Box -->
         <div
-          class="px-10 py-3 rounded-full border-2 border-white/60 text-white text-[26px] font-semibold shadow-[0_0_12px_#ffffff80] backdrop-blur-sm"
+          class="px-10 py-2 relative flex gap-4 items-center gap-4 rounded-full border-2 border-white/60 text-white text-[26px] font-semibold shadow-[0_0_12px_#ffffff80] backdrop-blur-sm"
         >
-          012 345 6789
+          <div
+            class="h-[70px] absolute left-0 w-[70px] mr-[10px] rounded-full bg-[#c3432b] border border-white/50 flex justify-center items-center ml-[-14px] backdrop-blur-sm shadow-lg"
+          >
+            <img src="assets/images/call.gif" class="w-12 h-12" />
+          </div>
+          <p class="ml-[20px]">012 345 6789</p>
         </div>
 
         <!-- Heading -->
@@ -522,7 +530,7 @@
           <!-- POINT 1 -->
           <div class="flex items-start gap-4 mb-6">
             <div
-              class="w-[50px] flex justify-center items-center h-[50px] rounded-full bg-[#F94C2C]"
+              class="w-[50px] flex justify-center items-center h-[50px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A]"
             >
               <img src="assets/images/certification.png" class="w-10" />
             </div>
@@ -539,7 +547,7 @@
           <!-- POINT 2 -->
           <div class="flex items-start gap-4 mb-6">
             <div
-              class="w-[50px] flex justify-center items-center h-[50px] rounded-full bg-[#F94C2C]"
+              class="w-[50px] flex justify-center items-center h-[50px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A]"
             >
               <img src="assets/images/pricetag.png" class="w-10" />
             </div>
@@ -556,7 +564,7 @@
           <!-- POINT 3 -->
           <div class="flex items-start gap-4">
             <div
-              class="w-[50px] flex justify-center items-center h-[50px] rounded-full bg-[#F94C2C]"
+              class="w-[50px] flex justify-center items-center h-[50px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A]"
             >
               <img src="assets/images/clock.png" class="w-10" />
             </div>
@@ -667,7 +675,7 @@
         class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-5"
       >
         <!-- CARD 1 -->
-        <div class="rounded-xl overflow-hidden bg-white">
+        <div class="rounded-r-[30px] overflow-hidden bg-white">
           <img
             src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg"
             class="w-full h-60 object-cover"
@@ -676,7 +684,7 @@
           <div class="bg-[#F94C2C] w-[80%] p-6 rounded-t-2xl relative -mt-10">
             <!-- DATE TAG -->
             <span
-              class="absolute -top-4 left-4 bg-[#FFFFFF] text-[#F94C2C] text-sm px-4 py-1 rounded-full shadow"
+              class="absolute w-[200px] -top-4 left-0 bg-[#FFFFFF] text-[#F94C2C] text-[20px] px-4 py-1 rounded-tr-[20px] rounded-br-[20px] shadow"
             >
               July 27, 2025
             </span>
@@ -697,7 +705,7 @@
         </div>
 
         <!-- CARD 2 (Same) -->
-        <div class="rounded-xl overflow-hidden bg-white">
+        <div class="rounded-r-[30px] overflow-hidden bg-white">
           <img
             src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg"
             class="w-full h-60 object-cover"
@@ -706,7 +714,7 @@
           <div class="bg-[#F94C2C] w-[80%] p-6 rounded-t-2xl relative -mt-10">
             <!-- DATE TAG -->
             <span
-              class="absolute -top-4 left-4 bg-[#FFFFFF] text-[#F94C2C] text-sm px-4 py-1 rounded-full shadow"
+              class="absolute w-[200px] -top-4 left-0 bg-[#FFFFFF] text-[#F94C2C] text-[20px] px-4 py-1 rounded-tr-[20px] rounded-br-[20px] shadow"
             >
               July 27, 2025
             </span>
@@ -727,7 +735,7 @@
         </div>
 
         <!-- CARD 3 (Same) -->
-        <div class="rounded-xl overflow-hidden bg-white">
+        <div class="rounded-r-[30px] overflow-hidden bg-white">
           <img
             src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg"
             class="w-full h-60 object-cover"
@@ -736,7 +744,7 @@
           <div class="bg-[#F94C2C] w-[80%] p-6 rounded-t-2xl relative -mt-10">
             <!-- DATE TAG -->
             <span
-              class="absolute -top-4 left-4 bg-[#FFFFFF] text-[#F94C2C] text-sm px-4 py-1 rounded-full shadow"
+              class="absolute w-[200px] -top-4 left-0 bg-[#FFFFFF] text-[#F94C2C] text-[20px] px-4 py-1 rounded-tr-[20px] rounded-br-[20px] shadow"
             >
               July 27, 2025
             </span>
@@ -821,22 +829,38 @@
               industry. Lorem Ipsum has been the industry's standard.
             </p>
             <div class="flex space-x-3">
-              <a href="#" class="social-icon" aria-label="Twitter"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a href="#" class="social-icon" aria-label="Facebook"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" class="social-icon" aria-label="LinkedIn"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-              <a href="#" class="social-icon" aria-label="Instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
+              <div
+                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border-[#f74b2c]"
+              >
+                <a href="#" class="social-icon" aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </div>
+              <div
+                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border-[#f74b2c]"
+              >
+                <a href="#" class="social-icon" aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </div>
+              <div
+                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border-[#f74b2c]"
+              >
+                <a href="#" class="social-icon" aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </div>
+              <div
+                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border-[#f74b2c]"
+              >
+                <a href="#" class="social-icon" aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </div>
             </div>
           </div>
 
-          <div>
+          <div class="ml-10">
             <h4 class="text-[24px] radio font-semibold mb-6">Quick Links</h4>
             <ul class="space-y-3 radio text-[20px]">
               <li

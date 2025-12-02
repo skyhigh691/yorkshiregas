@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="robots" content="noindex" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- LightGallery CSS (required) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css"
+    />
+
+    <style>
+      .radio {
+        font-family: "Radio Canada", sans-serif;
+      }
+      .redhat {
+        font-family: "Red Hat Text", sans-serif;
+      }
+      .raleway {
+        font-family: "Raleway", sans-serif;
+      }
+      .shape {
+        position: relative;
+      }
+
+      .shape::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 70%;
+        background: #fbd3ca; /* Light peach shade similar to your image */
+        clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+        z-index: 1;
+      }
+      .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+      .faq-active .faq-content {
+        max-height: 400px;
+      }
+
+      /* Gallery tweaks */
+      .gallery-item img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+        border-radius: 8px;
+      }
+
+      /* filter button active state */
+      .filter-btn.active {
+        outline: 3px solid rgba(249, 76, 44, 0.18);
+        transform: translateY(-2px);
+      }
+
+      /* Make gallery anchors not display decoration */
+      #lightgallery a {
+        text-decoration: none;
+      }
+
+      /* responsive tweaks for small screens */
+      @media (max-width: 768px) {
+        .gallery-item img {
+          height: 160px;
+        }
+        .w-[70%] {
+          width: 92% !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--header and banner started here -->
+    <div class="w-full relative">
+      <div class="w-full h-[130px] relative flex justify-center bg-[#033257]">
+        <div class="w-[80%] flex justify-end">
+          <div class="flex gap-5 items-center">
+            <a class="flex gap-2 radio text-white">
+              <img src="assets/images/phone.png" class="h-5 w-5" />
+              012 03456 7890
+            </a>
+            <a class="flex gap-2 radio text-white">
+              <img src="assets/images/email.png" class="h-5 w-5" />
+              loremgmail@gmail.com
+            </a>
+
+            <!-- Facebook -->
+            <div
+              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center"
+            >
+              <i class="fa-brands fa-facebook-f text-white text-xl"></i>
+            </div>
+
+            <!-- Instagram -->
+            <div
+              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center"
+            >
+              <i class="fa-brands fa-instagram text-white text-xl"></i>
+            </div>
+
+            <!-- YouTube -->
+            <div
+              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center"
+            >
+              <i class="fa-brands fa-youtube text-white text-xl"></i>
+            </div>
+
+            <!-- LinkedIn -->
+            <div
+              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center"
+            >
+              <i class="fa-brands fa-linkedin-in text-white text-xl"></i>
+            </div>
+            <img src="assets/images/gas.png" class="h-[60px] ml-[30px]" />
+          </div>
+        </div>
+      </div>
+      <!--header section -->
+      <div class="w-full flex z-[12] justify-center absolute top-[110px]">
+        <div
+          class="w-[84%] flex items-center gap-5 bg-white h-[60px] rounded-tl-[50px] rounded-bl-[50px] rounded-br-[50px] rounded-tr-[50px]"
+        >
+          <div
+            class="h-[140px] w-[140px] rounded-full bg-white mt-[-10px] ml-[50px]"
+          >
+            <img src="assets/images/logo.png" class="h-[100px]" />
+          </div>
+          <ul class="flex gap-8 justify-end ml-[30px] redhat font-bold w-[60%]">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="service.html">OUR SERVICES</a>
+            <a href="gallery.html">OUR GALLERY</a>
+            <a href="contact.html">CONTACT US</a>
+            <a href="blog.html">BLOG</a>
+          </ul>
+          <div class="flex justify-end h-full w-[30%]">
+            <div
+              class="w-[250px] radio flex gap-2 text-2xl text-white justify-center items-center rounded-tr-[50px] h-full rounded-br-[50px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A]"
+            >
+              <img src="assets/images/CALLICON.png" class="h-10" />
+              CALL NOW
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--banner-->
+
+      <div
+        class="bg-cover relative bg-center bg-[url('assets/images/bannerimage.jpg')] w-full h-[50vh]"
+      >
+        <img
+          src="assets/images/bannershape.png"
+          class="absolute z-[20] bottom-0"
+        />
+        <div
+          class="w-[65%] flex flex-col justify-center items-center bg-[#094C80AD] relative z-[10] h-full"
+          style="clip-path: polygon(0 0, 100% 0%, 81% 100%, 0% 100%)"
+        >
+          <h1 class="text-6xl radio ml-[-90px] text-white">
+            View Our Latest Work <br />
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!--header and banner is finished here-->
+
+    <!-- FILTER BUTTONS (added data-filter) -->
+    <div class="w-full flex justify-center py-10">
+      <div class="w-[80%] justify-center flex gap-4 flex-wrap">
+        <!-- I kept the same button styles but added data-filter attributes -->
+        <button
+          class="filter-btn px-6 py-2 text-white font-bold bg-gradient-to-r from-[#033257] to-[#076EBD]"
+          data-filter="all"
+        >
+          All
+        </button>
+
+        <button
+          class="filter-btn px-6 py-2 text-white font-bold bg-gradient-to-r from-[#033257] to-[#076EBD]"
+          data-filter="plumbing"
+        >
+          Plumbing
+        </button>
+        <button
+          class="filter-btn px-6 py-2 text-white font-bold bg-gradient-to-r from-[#033257] to-[#076EBD]"
+          data-filter="boiler-install"
+        >
+          Boiler Installation
+        </button>
+        <button
+          class="filter-btn px-6 py-2 text-white font-bold bg-gradient-to-r from-[#033257] to-[#076EBD]"
+          data-filter="boiler-repair"
+        >
+          Boiler Repair
+        </button>
+        <button
+          class="filter-btn px-6 py-2 text-white font-bold bg-gradient-to-r from-[#033257] to-[#076EBD]"
+          data-filter="gas-repair"
+        >
+          Gas Repair
+        </button>
+        <button
+          class="filter-btn px-6 py-2 text-white font-bold bg-gradient-to-r from-[#033257] to-[#076EBD]"
+          data-filter="gas-install"
+        >
+          Gas Installation
+        </button>
+      </div>
+    </div>
+
+    <!-- GALLERY: anchors are lightgallery items. Keep markup similar to yours -->
+    <div class="w-full flex justify-center py-10">
+      <div
+        class="w-[100px] max-h-[400px] mt-[30px] border-t-[2px] border-b-[2px] border-l-[2px] border-[#F74B2C]"
+      ></div>
+      <div
+        class="w-[70px] max-h-[300px] mt-[70px] border-t-[2px] border-b-[2px] border-l-[2px] border-[#F74B2C]"
+      ></div>
+
+      <!-- LightGallery container (id=lightgallery) -->
+      <div
+        class="flex flex-wrap justify-center w-[70%] gap-10"
+        id="lightgallery"
+      >
+        <!-- each anchor must link to the large image (href) and have a data-category -->
+        <!-- KEEP your original images and add data-category accordingly -->
+        <a
+          href="assets/images/aboutusimage.jpg"
+          class="gallery-item w-[30%] visible"
+          data-category="plumbing"
+          data-sub-html="<h4>Plumbing work</h4><p>Some description</p>"
+        >
+          <img src="assets/images/aboutusimage.jpg" alt="plumbing" />
+        </a>
+
+        <a
+          href="assets/images/aboutusimage.jpg"
+          class="gallery-item w-[30%] visible"
+          data-category="boiler-install"
+          data-sub-html="<h4>Boiler Installation</h4><p>Some description</p>"
+        >
+          <img src="assets/images/aboutusimage.jpg" alt="boiler-install" />
+        </a>
+
+        <a
+          href="assets/images/aboutusimage.jpg"
+          class="gallery-item w-[30%] visible"
+          data-category="boiler-repair"
+          data-sub-html="<h4>Boiler Repair</h4><p>Some description</p>"
+        >
+          <img src="assets/images/aboutusimage.jpg" alt="boiler-repair" />
+        </a>
+
+        <a
+          href="assets/images/aboutusimage.jpg"
+          class="gallery-item w-[30%] visible"
+          data-category="gas-repair"
+          data-sub-html="<h4>Gas Repair</h4><p>Some description</p>"
+        >
+          <img src="assets/images/aboutusimage.jpg" alt="gas-repair" />
+        </a>
+
+        <a
+          href="assets/images/aboutusimage.jpg"
+          class="gallery-item w-[30%] visible"
+          data-category="gas-install"
+          data-sub-html="<h4>Gas Installation</h4><p>Some description</p>"
+        >
+          <img src="assets/images/aboutusimage.jpg" alt="gas-install" />
+        </a>
+
+        <a
+          href="assets/images/aboutusimage.jpg"
+          class="gallery-item w-[30%] visible"
+          data-category="plumbing"
+          data-sub-html="<h4>Plumbing 2</h4><p>Some description</p>"
+        >
+          <img src="assets/images/aboutusimage.jpg" alt="plumbing-2" />
+        </a>
+      </div>
+
+      <div
+        class="w-[70px] max-h-[300px] mt-[70px] border-t-[2px] border-b-[2px] border-r-[2px] border-[#F74B2C]"
+      ></div>
+      <div
+        class="w-[100px] max-h-[400px] mt-[30px] border-t-[2px] border-b-[2px] border-r-[2px] border-[#F74B2C]"
+      ></div>
+    </div>
+
+    <footer class="footer-background bg-[#063559] pt-20">
+      <div
+        class="footer-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 text-white"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-8 border-b border-[#F94C2CB5] pb-10"
+        >
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <img src="assets/images/footerlogo.png" class="h-[140px]" />
+            </div>
+            <p class="text-[16px] text-gray-300 radio mb-6 max-w-xs">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard.
+            </p>
+            <div class="flex space-x-3">
+              <a href="#" class="social-icon" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-[24px] radio font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-3 radio text-[20px]">
+              <li
+                class="flex items-start text-gray-300 hover:text-red-500 transition duration-150"
+              >
+                <i
+                  class="fas fa-chevron-right text-red-500 text-xs mr-2 mt-1"
+                ></i>
+                <a href="#">Home</a>
+              </li>
+              <li
+                class="flex items-start text-gray-300 hover:text-red-500 transition duration-150"
+              >
+                <i
+                  class="fas fa-chevron-right text-red-500 text-xs mr-2 mt-1"
+                ></i>
+                <a href="about.html">About us</a>
+              </li>
+              <li
+                class="flex items-start text-gray-300 hover:text-red-500 transition duration-150"
+              >
+                <i
+                  class="fas fa-chevron-right text-red-500 text-xs mr-2 mt-1"
+                ></i>
+                <a href="service.html">Our Services</a>
+              </li>
+              <li
+                class="flex items-start text-gray-300 hover:text-red-500 transition duration-150"
+              >
+                <i
+                  class="fas fa-chevron-right text-red-500 text-xs mr-2 mt-1"
+                ></i>
+                <a href="#">Our Gallery</a>
+              </li>
+              <li
+                class="flex items-start text-gray-300 hover:text-red-500 transition duration-150"
+              >
+                <i
+                  class="fas fa-chevron-right text-red-500 text-xs mr-2 mt-1"
+                ></i>
+                <a href="contact.html">Contact us</a>
+              </li>
+              <li
+                class="flex items-start text-gray-300 hover:text-red-500 transition duration-150"
+              >
+                <i
+                  class="fas fa-chevron-right text-red-500 text-xs mr-2 mt-1"
+                ></i>
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-[24px] radio font-semibold mb-6">Contact Info</h4>
+            <div class="space-y-4">
+              <div class="flex items-start text-gray-300">
+                <i
+                  class="fas fa-map-marker-alt text-red-500 text-lg mt-1 mr-3"
+                ></i>
+                <p class="text-[18px] radio">
+                  32 Lorem Rd, Lorem BR2 8BA, United Kingdom
+                </p>
+              </div>
+              <div class="flex items-center text-gray-300">
+                <i class="fas fa-envelope text-red-500 text-lg mr-3"></i>
+                <p class="text-[18px] radio">Loremtest@gmail.com</p>
+              </div>
+              <div class="flex items-center text-gray-300">
+                <i class="fas fa-phone-alt text-red-500 text-lg mr-3"></i>
+                <p class="text-[18px] radio">0123-4567-6065</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-[24px] radio font-semibold mb-6">Working Hours</h4>
+            <div class="space-y-4">
+              <p class="text-gray-300 radio text-[18px]">
+                <span class="font-semibold text-white">Monday to Friday:</span>
+                8am to 8pm
+              </p>
+              <p class="text-gray-300 radio text-[18px]">
+                <span class="font-semibold text-white">Saturday-Sunday:</span>
+                9am to 5pm
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center text-[18px] radio pt-8 text-gray-400">
+          &copy; 2025 All Rights Reserved Lorem Ipsum Services
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts: jQuery first, then LightGallery + plugins, then our code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- LightGallery bundle includes core + plugins (thumbnail, zoom etc) -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
+
+    <!-- Optional plugins you had (owl, bootstrap) - kept as you included them -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // initialize active state on "All"
+        $('.filter-btn[data-filter="all"]').addClass("active");
+
+        // helper to (re)initialize lightGallery for visible items only
+        let lgInstance = null;
+        function initLightGallery() {
+          // destroy existing instance if present
+          if (lgInstance && typeof lgInstance.destroy === "function") {
+            try {
+              lgInstance.destroy();
+            } catch (e) {
+              // ignore
+            }
+            lgInstance = null;
+          }
+
+          // initialize with selector that matches only items with class .visible
+          const galleryEl = document.getElementById("lightgallery");
+          lgInstance = lightGallery(galleryEl, {
+            selector: ".gallery-item.visible",
+            thumbnail: true,
+            plugins: [lgThumbnail, lgZoom],
+            zoom: true,
+            download: true,
+            licenseKey: "", // optional if you have one
+            speed: 500,
+          });
+        }
+
+        // mark all loaded gallery items as visible (so gallery includes them initially)
+        $(".gallery-item").each(function () {
+          $(this).addClass("visible");
+        });
+
+        // initialize LG first time
+        initLightGallery();
+
+        // filtering
+        $(".filter-btn").on("click", function () {
+          const filter = $(this).data("filter");
+
+          // toggle active class
+          $(".filter-btn").removeClass("active");
+          $(this).addClass("active");
+
+          if (filter === "all") {
+            // show all -> add visible class and show anchors
+            $(".gallery-item").each(function () {
+              $(this).addClass("visible").show();
+            });
+          } else {
+            // hide all then show only matching category
+            $(".gallery-item").each(function () {
+              const cat = $(this).data("category");
+              if (cat === filter) {
+                $(this).addClass("visible").show();
+              } else {
+                $(this).removeClass("visible").hide();
+              }
+            });
+          }
+
+          // re-init lightGallery so it uses only elements with .visible
+          // add a tiny timeout to ensure layout updated before init
+          setTimeout(function () {
+            initLightGallery();
+          }, 60);
+        });
+
+        // Optional: allow clicking images to open (already handled by LightGallery)
+        // Optional: keyboard accessibility - focusable anchors
+        $(".gallery-item").attr("tabindex", "0");
+
+        // If you later add images dynamically, call initLightGallery() again after adding them.
+      });
+    </script>
+
+    <!-- FAQ JS (kept exactly as your original) -->
+    <script>
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        const header = item.querySelector(".faq-header");
+        if (!header) return;
+        header.addEventListener("click", () => {
+          const isOpen = item.classList.contains("faq-active");
+
+          faqItems.forEach((i) => {
+            i.classList.remove("faq-active");
+            const icon = i.querySelector(".faq-icon");
+            if (icon) icon.textContent = "+";
+            const hdr = i.querySelector(".faq-header");
+            if (hdr) {
+              hdr.classList.remove(
+                "bg-gradient-to-r",
+                "from-[#f94c2c]",
+                "to-[#ff7961]",
+                "text-white"
+              );
+              hdr.classList.add("text-[#033257]");
+            }
+          });
+
+          if (!isOpen) {
+            item.classList.add("faq-active");
+            const icon = item.querySelector(".faq-icon");
+            if (icon) icon.textContent = "−";
+            const hdr = item.querySelector(".faq-header");
+            if (hdr) {
+              hdr.classList.add(
+                "bg-gradient-to-r",
+                "from-[#f94c2c]",
+                "to-[#ff7961]",
+                "text-white"
+              );
+              hdr.classList.remove("text-[#033257]");
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
