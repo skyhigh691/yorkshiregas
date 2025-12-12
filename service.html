@@ -6,6 +6,10 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="robots" content="noindex" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;500;700&display=swap"
@@ -212,53 +216,280 @@
       </div>
     </div>
 
-    <div class="w-full py-10 flex justify-center items-center">
-      <div class="w-[83%] flex justify-center gap-10">
-        <div class="relative w-[50%]">
-          <img src="assets/images/aboutusimage.jpg" class="h-[400px]" />
-          <div
-            class="w-[80%] bg-white rounded-[10px] h-[220px] shadow-xl left-[9%] bottom-[-130px] shadow-xl absolute"
-          >
-            <h4 class="radio text-2xl py-4 px-8">
-              lorem ipsum <span class="text-[#F64B2B]">service 1</span>
-            </h4>
-            <p class="px-8 text-[18px] raleway">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-              obcaecati maxime autem inventore sapiente quaerat reprehenderit
-              facere nobis voluptatibus...
-            </p>
+    <div class="w-full py-10">
+      <div class="swiper mySwiper w-[90%] mx-auto">
+        <div class="swiper-wrapper">
+          <!-- CARD START -->
+          <div class="swiper-slide">
             <div
-              class="w-[140px] absolute flex right-[20px] bottom-[10px] h-[40px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A]"
+              class="relative w-[350px] h-[420px] group overflow-hidden rounded-[12px] mx-auto"
             >
-              <img src="assets/images/readmorearrow.png" />
-              <p class="text-white mt-2 font-bold ml-1 redhat">Read More</p>
+              <img
+                src="assets/images/aboutusimage.jpg"
+                class="h-full w-full object-cover"
+              />
+
+              <!-- Bottom Bar -->
+              <div
+                class="absolute bottom-0 w-full bg-black/50 text-white px-6 py-3 text-xl font-semibold"
+              >
+                lorem ipsum <span class="text-[#F64B2B]">service 1</span>
+              </div>
+
+              <!-- Hover Overlay (FULL WIDTH but half height) -->
+              <div
+                class="absolute bottom-0 left-0 w-full h-[50%] bg-white rounded-t-[12px] shadow-xl p-6 translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out"
+              >
+                <h4 class="text-xl radio">
+                  lorem ipsum <span class="text-[#F64B2B]">service 1</span>
+                </h4>
+
+                <p class="mt-2 text-[16px] raleway leading-snug">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Maxime inventore sapiente quaerat...
+                </p>
+
+                <!-- FIXED PERFECT BUTTON -->
+                <div
+                  class="flex items-center gap-2 bg-gradient-to-r from-[#F94C2C] to-[#932D1A] px-5 h-[45px] rounded-full cursor-pointer w-fit mt-4"
+                >
+                  <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
+                  <p class="text-white font-bold redhat text-[18px]">
+                    Read More
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="relative w-[50%]">
-          <img src="assets/images/aboutusimage.jpg" class="h-[400px]" />
-          <div
-            class="w-[80%] bg-white rounded-[10px] h-[220px] shadow-xl left-[9%] bottom-[-130px] shadow-xl absolute"
-          >
-            <h4 class="text-2xl radio py-4 px-8">
-              lorem ipsum <span class="text-[#F64B2B]">service 1</span>
-            </h4>
-            <p class="px-8 text-[18px] raleway">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-              obcaecati maxime autem inventore sapiente quaerat reprehenderit
-              facere nobis voluptatibus...
-            </p>
+          <!-- CARD END -->
+
+          <!-- COPY-PASTE CARD TO DUPLICATE -->
+          <div class="swiper-slide">
             <div
-              class="w-[140px] absolute flex right-[20px] bottom-[10px] h-[40px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A]"
+              class="relative w-[350px] h-[420px] group overflow-hidden rounded-[12px] mx-auto"
             >
-              <img src="assets/images/readmorearrow.png" />
-              <p class="text-white mt-2 font-bold ml-1 redhat">Read More</p>
+              <img
+                src="assets/images/aboutusimage.jpg"
+                class="h-full w-full object-cover"
+              />
+
+              <div
+                class="absolute bottom-0 w-full bg-black/50 text-white px-6 py-3 text-xl font-semibold"
+              >
+                lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+              </div>
+
+              <div
+                class="absolute bottom-0 left-0 w-full h-[50%] bg-white rounded-t-[12px] shadow-xl p-6 translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out"
+              >
+                <h4 class="text-xl radio">
+                  lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                </h4>
+
+                <p class="mt-2 text-[16px] raleway leading-snug">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                </p>
+
+                <div
+                  class="flex items-center gap-2 bg-gradient-to-r from-[#F94C2C] to-[#932D1A] px-5 h-[45px] rounded-full cursor-pointer w-fit mt-4"
+                >
+                  <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
+                  <p class="text-white font-bold redhat text-[18px]">
+                    Read More
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div
+              class="relative w-[350px] h-[420px] group overflow-hidden rounded-[12px] mx-auto"
+            >
+              <img
+                src="assets/images/aboutusimage.jpg"
+                class="h-full w-full object-cover"
+              />
+
+              <div
+                class="absolute bottom-0 w-full bg-black/50 text-white px-6 py-3 text-xl font-semibold"
+              >
+                lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+              </div>
+
+              <div
+                class="absolute bottom-0 left-0 w-full h-[50%] bg-white rounded-t-[12px] shadow-xl p-6 translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out"
+              >
+                <h4 class="text-xl radio">
+                  lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                </h4>
+
+                <p class="mt-2 text-[16px] raleway leading-snug">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                </p>
+
+                <div
+                  class="flex items-center gap-2 bg-gradient-to-r from-[#F94C2C] to-[#932D1A] px-5 h-[45px] rounded-full cursor-pointer w-fit mt-4"
+                >
+                  <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
+                  <p class="text-white font-bold redhat text-[18px]">
+                    Read More
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="relative w-[350px] h-[420px] group overflow-hidden rounded-[12px] mx-auto"
+            >
+              <img
+                src="assets/images/aboutusimage.jpg"
+                class="h-full w-full object-cover"
+              />
+
+              <div
+                class="absolute bottom-0 w-full bg-black/50 text-white px-6 py-3 text-xl font-semibold"
+              >
+                lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+              </div>
+
+              <div
+                class="absolute bottom-0 left-0 w-full h-[50%] bg-white rounded-t-[12px] shadow-xl p-6 translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out"
+              >
+                <h4 class="text-xl radio">
+                  lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                </h4>
+
+                <p class="mt-2 text-[16px] raleway leading-snug">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                </p>
+
+                <div
+                  class="flex items-center gap-2 bg-gradient-to-r from-[#F94C2C] to-[#932D1A] px-5 h-[45px] rounded-full cursor-pointer w-fit mt-4"
+                >
+                  <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
+                  <p class="text-white font-bold redhat text-[18px]">
+                    Read More
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="relative w-[350px] h-[420px] group overflow-hidden rounded-[12px] mx-auto"
+            >
+              <img
+                src="assets/images/aboutusimage.jpg"
+                class="h-full w-full object-cover"
+              />
+
+              <div
+                class="absolute bottom-0 w-full bg-black/50 text-white px-6 py-3 text-xl font-semibold"
+              >
+                lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+              </div>
+
+              <div
+                class="absolute bottom-0 left-0 w-full h-[50%] bg-white rounded-t-[12px] shadow-xl p-6 translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out"
+              >
+                <h4 class="text-xl radio">
+                  lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                </h4>
+
+                <p class="mt-2 text-[16px] raleway leading-snug">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                </p>
+
+                <div
+                  class="flex items-center gap-2 bg-gradient-to-r from-[#F94C2C] to-[#932D1A] px-5 h-[45px] rounded-full cursor-pointer w-fit mt-4"
+                >
+                  <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
+                  <p class="text-white font-bold redhat text-[18px]">
+                    Read More
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="relative w-[350px] h-[420px] group overflow-hidden rounded-[12px] mx-auto"
+            >
+              <img
+                src="assets/images/aboutusimage.jpg"
+                class="h-full w-full object-cover"
+              />
+
+              <div
+                class="absolute bottom-0 w-full bg-black/50 text-white px-6 py-3 text-xl font-semibold"
+              >
+                lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+              </div>
+
+              <div
+                class="absolute bottom-0 left-0 w-full h-[50%] bg-white rounded-t-[12px] shadow-xl p-6 translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out"
+              >
+                <h4 class="text-xl radio">
+                  lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                </h4>
+
+                <p class="mt-2 text-[16px] raleway leading-snug">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                </p>
+
+                <div
+                  class="flex items-center gap-2 bg-gradient-to-r from-[#F94C2C] to-[#932D1A] px-5 h-[45px] rounded-full cursor-pointer w-fit mt-4"
+                >
+                  <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
+                  <p class="text-white font-bold redhat text-[18px]">
+                    Read More
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="relative w-[350px] h-[420px] group overflow-hidden rounded-[12px] mx-auto"
+            >
+              <img
+                src="assets/images/aboutusimage.jpg"
+                class="h-full w-full object-cover"
+              />
+
+              <div
+                class="absolute bottom-0 w-full bg-black/50 text-white px-6 py-3 text-xl font-semibold"
+              >
+                lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+              </div>
+
+              <div
+                class="absolute bottom-0 left-0 w-full h-[50%] bg-white rounded-t-[12px] shadow-xl p-6 translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out"
+              >
+                <h4 class="text-xl radio">
+                  lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                </h4>
+
+                <p class="mt-2 text-[16px] raleway leading-snug">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                </p>
+
+                <div
+                  class="flex items-center gap-2 bg-gradient-to-r from-[#F94C2C] to-[#932D1A] px-5 h-[45px] rounded-full cursor-pointer w-fit mt-4"
+                >
+                  <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
+                  <p class="text-white font-bold redhat text-[18px]">
+                    Read More
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <!---about service  section-->
     <section
       class="pt-[120px] px-4 w-full pt-10"
@@ -277,7 +508,7 @@
 
             <h2 class="text-4xl radio md:text-5xl leading-tight">
               The advantages of partnering <br />
-              with HVAC experts
+              with Yorkshire
             </h2>
           </div>
 
@@ -296,50 +527,86 @@
         <div class="grid md:grid-cols-2 gap-12">
           <!-- Column 1 -->
           <div class="space-y-10">
+            <!-- Customer Satisfaction -->
             <div class="flex gap-4">
               <div
-                class="w-12 h-12 rounded-xl flex justify-center items-center border border-[#F24A2B]"
-                style="color: #f24a2b"
+                class="w-12 h-12 rounded-xl flex justify-center items-center border border-[#F24A2B] shadow-[0_0_12px_#F24A2B] bg-[#F24A2B]/10"
               >
-                🌐
+                <!-- Star Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-[#F24A2B]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"
+                  />
+                </svg>
               </div>
               <div>
                 <h3 class="radio text-2xl">100% Customer Satisfaction</h3>
-                <p class="text-gray-300 raleway text-sm">
+                <p class="text-gray-300 raleway text-[18px]">
                   We specialize in delivering dependable heating and cooling
                   services with exceptional attention.
                 </p>
               </div>
             </div>
 
+            <!-- Certified Technicians -->
             <div class="flex gap-4">
               <div
-                class="w-12 h-12 rounded-xl flex justify-center items-center border border-[#F24A2B]"
-                style="color: #f24a2b"
+                class="w-12 h-12 rounded-xl flex justify-center items-center border border-[#F24A2B] shadow-[0_0_12px_#F24A2B] bg-[#F24A2B]/10"
               >
-                👨‍🔧
+                <!-- Tools Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-[#F24A2B]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    d="M10 6l-7 7 1.5 1.5 7-7m8 8l-7 7 1.5 1.5 7-7M14 2l8 8-3 3-8-8z"
+                  />
+                </svg>
               </div>
               <div>
                 <h3 class="radio text-2xl">
                   Certified & Experienced Technicians
                 </h3>
-                <p class="text-gray-300 raleway text-sm">
+                <p class="text-gray-300 raleway text-[18px]">
                   Our team brings certified skills and years of experience to
                   every HVAC installation and repair.
                 </p>
               </div>
             </div>
 
+            <!-- Locally Owned -->
             <div class="flex gap-4">
               <div
-                class="w-12 h-12 rounded-xl flex justify-center items-center border border-[#F24A2B]"
-                style="color: #f24a2b"
+                class="w-12 h-12 rounded-xl flex justify-center items-center border border-[#F24A2B] shadow-[0_0_12px_#F24A2B] bg-[#F24A2B]/10"
               >
-                🧲
+                <!-- Location Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-[#F24A2B]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    d="M12 11.5a3 3 0 100-6 3 3 0 000 6zm0 9.5s-7-4.5-7-10a7 7 0 1114 0c0 5.5-7 10-7 10z"
+                  />
+                </svg>
               </div>
               <div>
                 <h3 class="text-2xl radio">Locally Owned & Operated</h3>
-                <p class="text-gray-300 text-sm raleway">
+                <p class="text-gray-300 text-[18px] raleway">
                   We are proudly local, offering dedicated HVAC solutions
                   tailored to your home's needs.
                 </p>
@@ -349,52 +616,85 @@
 
           <!-- Column 2 -->
           <div class="space-y-10">
+            <!-- Fast & Reliable Service -->
             <div class="flex gap-4">
               <div
-                class="w-12 h-12 rounded-xl flex justify-center items-center border border-[#F24A2B]"
-                style="color: #f24a2b"
+                class="w-12 h-12 rounded-xl flex justify-center items-center border border-[#F24A2B] shadow-[0_0_12px_#F24A2B] bg-[#F24A2B]/10"
               >
-                📦
+                <!-- Lightning Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-[#F24A2B]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path stroke-width="2" d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" />
+                </svg>
               </div>
               <div>
                 <h3 class="font-semibold text-2xl radio">
                   Fast & Reliable Service
                 </h3>
-                <p class="text-gray-300 raleway text-sm">
+                <p class="text-gray-300 raleway text-[18px]">
                   Quick response times and high-quality HVAC solutions when you
                   need them most.
                 </p>
               </div>
             </div>
 
+            <!-- Energy Efficient -->
             <div class="flex gap-4">
               <div
-                class="w-12 h-12 rounded-xl flex justify-center items-center border border-[#F24A2B]"
-                style="color: #f24a2b"
+                class="w-12 h-12 rounded-xl flex justify-center items-center border border-[#F24A2B] shadow-[0_0_12px_#F24A2B] bg-[#F24A2B]/10"
               >
-                ⚙️
+                <!-- Leaf Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-[#F24A2B]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    d="M5 20s4-1 6-7-1-9-1-9 8 3 9 9-5 10-5 10H5z"
+                  />
+                </svg>
               </div>
               <div>
                 <h3 class="radio text-2xl">Energy-Efficient Solutions</h3>
-                <p class="text-gray-300 text-sm raleway">
+                <p class="text-gray-300 text-[18px] raleway">
                   Reduce energy bills with our modern, efficient, and optimized
                   HVAC systems.
                 </p>
               </div>
             </div>
 
+            <!-- Satisfaction Guaranteed -->
             <div class="flex gap-4">
               <div
-                class="w-12 h-12 rounded-xl flex justify-center items-center border border-[#F24A2B]"
-                style="color: #f24a2b"
+                class="w-12 h-12 rounded-xl flex justify-center items-center border border-[#F24A2B] shadow-[0_0_12px_#F24A2B] bg-[#F24A2B]/10"
               >
-                💎
+                <!-- Badge Icon -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 text-[#F24A2B]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-width="2"
+                    d="M12 2l3 4 4 .5-3 3 1 4-4-2-4 2 1-4-3-3 4-.5z"
+                  />
+                </svg>
               </div>
               <div>
                 <h3 class="font-semibold text-2xl radio">
                   Satisfaction Guaranteed
                 </h3>
-                <p class="text-gray-300 text-sm raleway">
+                <p class="text-gray-300 text-[18px] raleway">
                   We stand behind our work with customer-first service and
                   guaranteed satisfaction.
                 </p>
@@ -467,7 +767,7 @@
                 Schedule a Free Gas Consultation
               </h3>
               <p
-                class="text-[#0B2A3C]/70 text-[17px] mt-2 raleway leading-relaxed"
+                class="text-[#0B2A3C]/70 text-[19px] mt-2 raleway leading-relaxed"
               >
                 Our licensed heating professionals inspect your gas system to
                 ensure safety, efficiency, and full compliance with regulations.
@@ -531,7 +831,7 @@
                 Quality Check & Leak Detection
               </h3>
               <p
-                class="text-[#0B2A3C]/70 mt-2 text-[17px] raleway leading-relaxed"
+                class="text-[#0B2A3C]/70 mt-2 text-[19px] raleway leading-relaxed"
               >
                 We run advanced leak detection, pipeline checks, and gas
                 pressure testing for maximum safety and performance.
@@ -583,7 +883,7 @@
                 Ongoing Support & Maintenance
               </h3>
               <p
-                class="text-[#0B2A3C]/70 raleway text-[17px] mt-2 leading-relaxed"
+                class="text-[#0B2A3C]/70 raleway text-[19px] mt-2 leading-relaxed"
               >
                 We offer routine gas heater servicing, emergency repairs, and
                 full maintenance plans to keep your system running efficiently.
@@ -605,7 +905,7 @@
             <div class="flex items-center space-x-2 mb-4">
               <img src="assets/images/footerlogo.png" class="h-[140px]" />
             </div>
-            <p class="text-[16px] text-gray-300 radio mb-6 max-w-xs">
+            <p class="text-[19px] text-gray-300 radio mb-6 max-w-xs">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard.
             </p>
@@ -737,6 +1037,25 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 1,
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        speed: 800,
+        breakpoints: {
+          320: { slidesPerView: 1 },
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+    </script>
 
     <script>
       const faqItems = document.querySelectorAll(".faq-item");
