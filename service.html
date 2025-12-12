@@ -161,7 +161,7 @@
     <!--services -->
 
     <div class="w-full flex justify-center py-16 px-4 sm:px-6 lg:px-8">
-      <div class="w-[90%] flex justify-center ml-[100px]">
+      <div class="w-[88%] flex justify-center">
         <div class="flex flex-col justify-start w-[50%]">
           <p
             class="text-[18px] radio text-[#F94C2C] tracking-wider mb-2 uppercase"
@@ -192,24 +192,41 @@
             </a>
           </div>
         </div>
-        <div class="relative w-[50%]">
-          <img src="assets/images/aboutusimage.jpg" class="h-[400px]" />
+        <div
+          class="relative w-[50%] h-[400px] group overflow-hidden rounded-xl cursor-pointer"
+        >
+          <!-- Background Image -->
+          <img
+            src="assets/images/aboutusimage.jpg"
+            class="w-full h-full object-cover"
+          />
+
+          <!-- Service Name (Visible Always) -->
           <div
-            class="w-[77%] bg-white rounded-[10px] h-[220px] shadow-xl left-[8%] bottom-[-50px] shadow-xl absolute"
+            class="absolute bottom-0 left-0 w-full text-center py-4 text-white text-2xl font-bold bg-black/40 group-hover:opacity-0 transition-all duration-300"
           >
-            <h4 class="radio text-2xl py-4 px-8">
-              lorem ipsum <span class="text-[#F64B2B]">service 1</span>
+            Service 1
+          </div>
+
+          <!-- Overlay Sliding Content -->
+          <div
+            class="absolute bottom-[-60%] left-0 w-full h-[60%] bg-black/70 text-white px-8 py-6 transition-all duration-500 group-hover:bottom-0"
+          >
+            <h4 class="text-2xl font-bold mb-3">
+              Lorem Ipsum <span class="text-[#F64B2B]">Service 1</span>
             </h4>
-            <p class="px-8 text-[18px] raleway">
+
+            <p class="text-[16px] leading-[22px] mb-5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-              obcaecati maxime autem inventore sapiente quaerat reprehenderit
-              ...
+              obcaecati maxime autem inventore sapiente quaerat reprehenderit...
             </p>
+
+            <!-- Read More Button -->
             <div
-              class="w-[140px] absolute flex right-[20px] bottom-[10px] h-[40px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A]"
+              class="w-[150px] h-[45px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A] flex items-center justify-center gap-2 text-white font-bold"
             >
-              <img src="assets/images/readmorearrow.png" />
-              <p class="text-white mt-2 font-bold ml-1 redhat">Read More</p>
+              <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
+              Read More
             </div>
           </div>
         </div>
@@ -217,46 +234,46 @@
     </div>
 
     <div class="w-full py-10">
-      <div class="swiper mySwiper w-[90%] mx-auto">
+      <div class="swiper mySwiper w-[82%] mx-auto">
         <div class="swiper-wrapper">
           <!-- CARD START -->
           <div class="swiper-slide">
             <div
-              class="relative w-[350px] h-[420px] group overflow-hidden rounded-[12px] mx-auto"
+              class="relative w-[400px] h-[400px] group overflow-hidden rounded-xl cursor-pointer"
             >
+              <!-- Background Image -->
               <img
                 src="assets/images/aboutusimage.jpg"
-                class="h-full w-full object-cover"
+                class="w-full h-full object-cover"
               />
 
-              <!-- Bottom Bar -->
+              <!-- Service Name (Visible Always) -->
               <div
-                class="absolute bottom-0 w-full bg-black/50 text-white px-6 py-3 text-2xl font-semibold"
+                class="absolute bottom-0 left-0 w-full text-center py-4 text-white text-2xl font-bold bg-black/40 group-hover:opacity-0 transition-all duration-300"
               >
-                lorem ipsum <span class="text-[#F64B2B]">service 1</span>
+                Service 1
               </div>
 
-              <!-- Hover Overlay (FULL WIDTH but half height) -->
+              <!-- Overlay Sliding Content -->
               <div
-                class="absolute bottom-0 left-0 w-full h-[50%] bg-white rounded-t-[12px] shadow-xl p-6 translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out"
+                class="absolute bottom-[-60%] left-0 w-full h-[60%] bg-black/70 text-white px-8 py-6 transition-all duration-500 group-hover:bottom-0"
               >
-                <h4 class="text-2xl radio">
-                  lorem ipsum <span class="text-[#F64B2B]">service 1</span>
+                <h4 class="text-2xl font-bold mb-3">
+                  Lorem Ipsum <span class="text-[#F64B2B]">Service 1</span>
                 </h4>
 
-                <p class="mt-2 text-[18px] raleway leading-snug">
+                <p class="text-[16px] leading-[22px] mb-5">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime inventore sapiente quaerat...
+                  Corrupti obcaecati maxime autem inventore sapiente quaerat
+                  reprehenderit...
                 </p>
 
-                <!-- FIXED PERFECT BUTTON -->
+                <!-- Read More Button -->
                 <div
-                  class="flex items-center gap-2 bg-gradient-to-r from-[#F94C2C] to-[#932D1A] px-5 h-[45px] rounded-full cursor-pointer w-fit mt-4"
+                  class="w-[150px] h-[45px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A] flex items-center justify-center gap-2 text-white font-bold"
                 >
                   <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
-                  <p class="text-white font-bold redhat text-[18px]">
-                    Read More
-                  </p>
+                  Read More
                 </div>
               </div>
             </div>
@@ -266,37 +283,41 @@
           <!-- COPY-PASTE CARD TO DUPLICATE -->
           <div class="swiper-slide">
             <div
-              class="relative w-[350px] h-[420px] group overflow-hidden rounded-[12px] mx-auto"
+              class="relative w-[400px] h-[400px] group overflow-hidden rounded-xl cursor-pointer"
             >
+              <!-- Background Image -->
               <img
                 src="assets/images/aboutusimage.jpg"
-                class="h-full w-full object-cover"
+                class="w-full h-full object-cover"
               />
 
+              <!-- Service Name (Visible Always) -->
               <div
-                class="absolute bottom-0 w-full bg-black/50 text-white px-6 py-3 text-2xl font-semibold"
+                class="absolute bottom-0 left-0 w-full text-center py-4 text-white text-2xl font-bold bg-black/40 group-hover:opacity-0 transition-all duration-300"
               >
-                lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                Service 1
               </div>
 
+              <!-- Overlay Sliding Content -->
               <div
-                class="absolute bottom-0 left-0 w-full h-[50%] bg-white rounded-t-[12px] shadow-xl p-6 translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out"
+                class="absolute bottom-[-60%] left-0 w-full h-[60%] bg-black/70 text-white px-8 py-6 transition-all duration-500 group-hover:bottom-0"
               >
-                <h4 class="text-2xl radio">
-                  lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                <h4 class="text-2xl font-bold mb-3">
+                  Lorem Ipsum <span class="text-[#F64B2B]">Service 1</span>
                 </h4>
 
-                <p class="mt-2 text-[18px] raleway leading-snug">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                <p class="text-[16px] leading-[22px] mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti obcaecati maxime autem inventore sapiente quaerat
+                  reprehenderit...
                 </p>
 
+                <!-- Read More Button -->
                 <div
-                  class="flex items-center gap-2 bg-gradient-to-r from-[#F94C2C] to-[#932D1A] px-5 h-[45px] rounded-full cursor-pointer w-fit mt-4"
+                  class="w-[150px] h-[45px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A] flex items-center justify-center gap-2 text-white font-bold"
                 >
                   <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
-                  <p class="text-white font-bold redhat text-[18px]">
-                    Read More
-                  </p>
+                  Read More
                 </div>
               </div>
             </div>
@@ -304,185 +325,287 @@
 
           <div class="swiper-slide">
             <div
-              class="relative w-[350px] h-[420px] group overflow-hidden rounded-[12px] mx-auto"
+              class="relative w-[400px] h-[400px] group overflow-hidden rounded-xl cursor-pointer"
             >
+              <!-- Background Image -->
               <img
                 src="assets/images/aboutusimage.jpg"
-                class="h-full w-full object-cover"
+                class="w-full h-full object-cover"
               />
 
+              <!-- Service Name (Visible Always) -->
               <div
-                class="absolute bottom-0 w-full bg-black/50 text-white px-6 py-3 text-2xl font-semibold"
+                class="absolute bottom-0 left-0 w-full text-center py-4 text-white text-2xl font-bold bg-black/40 group-hover:opacity-0 transition-all duration-300"
               >
-                lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                Service 1
               </div>
 
+              <!-- Overlay Sliding Content -->
               <div
-                class="absolute bottom-0 left-0 w-full h-[50%] bg-white rounded-t-[12px] shadow-xl p-6 translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out"
+                class="absolute bottom-[-60%] left-0 w-full h-[60%] bg-black/70 text-white px-8 py-6 transition-all duration-500 group-hover:bottom-0"
               >
-                <h4 class="text-2xl radio">
-                  lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                <h4 class="text-2xl font-bold mb-3">
+                  Lorem Ipsum <span class="text-[#F64B2B]">Service 1</span>
                 </h4>
 
-                <p class="mt-2 text-[18px] raleway leading-snug">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                <p class="text-[16px] leading-[22px] mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti obcaecati maxime autem inventore sapiente quaerat
+                  reprehenderit...
                 </p>
 
+                <!-- Read More Button -->
                 <div
-                  class="flex items-center gap-2 bg-gradient-to-r from-[#F94C2C] to-[#932D1A] px-5 h-[45px] rounded-full cursor-pointer w-fit mt-4"
+                  class="w-[150px] h-[45px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A] flex items-center justify-center gap-2 text-white font-bold"
                 >
                   <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
-                  <p class="text-white font-bold redhat text-[18px]">
-                    Read More
-                  </p>
+                  Read More
                 </div>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div
-              class="relative w-[350px] h-[420px] group overflow-hidden rounded-[12px] mx-auto"
+              class="relative w-[400px] h-[400px] group overflow-hidden rounded-xl cursor-pointer"
             >
+              <!-- Background Image -->
               <img
                 src="assets/images/aboutusimage.jpg"
-                class="h-full w-full object-cover"
+                class="w-full h-full object-cover"
               />
 
+              <!-- Service Name (Visible Always) -->
               <div
-                class="absolute bottom-0 w-full bg-black/50 text-white px-6 py-3 text-2xl font-semibold"
+                class="absolute bottom-0 left-0 w-full text-center py-4 text-white text-2xl font-bold bg-black/40 group-hover:opacity-0 transition-all duration-300"
               >
-                lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                Service 1
               </div>
 
+              <!-- Overlay Sliding Content -->
               <div
-                class="absolute bottom-0 left-0 w-full h-[50%] bg-white rounded-t-[12px] shadow-xl p-6 translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out"
+                class="absolute bottom-[-60%] left-0 w-full h-[60%] bg-black/70 text-white px-8 py-6 transition-all duration-500 group-hover:bottom-0"
               >
-                <h4 class="text-2xl radio">
-                  lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                <h4 class="text-2xl font-bold mb-3">
+                  Lorem Ipsum <span class="text-[#F64B2B]">Service 1</span>
                 </h4>
 
-                <p class="mt-2 text-[18px] raleway leading-snug">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                <p class="text-[16px] leading-[22px] mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti obcaecati maxime autem inventore sapiente quaerat
+                  reprehenderit...
                 </p>
 
+                <!-- Read More Button -->
                 <div
-                  class="flex items-center gap-2 bg-gradient-to-r from-[#F94C2C] to-[#932D1A] px-5 h-[45px] rounded-full cursor-pointer w-fit mt-4"
+                  class="w-[150px] h-[45px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A] flex items-center justify-center gap-2 text-white font-bold"
                 >
                   <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
-                  <p class="text-white font-bold redhat text-[18px]">
-                    Read More
-                  </p>
+                  Read More
                 </div>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div
-              class="relative w-[350px] h-[420px] group overflow-hidden rounded-[12px] mx-auto"
+              class="relative w-[400px] h-[400px] group overflow-hidden rounded-xl cursor-pointer"
             >
+              <!-- Background Image -->
               <img
                 src="assets/images/aboutusimage.jpg"
-                class="h-full w-full object-cover"
+                class="w-full h-full object-cover"
               />
 
+              <!-- Service Name (Visible Always) -->
               <div
-                class="absolute bottom-0 w-full bg-black/50 text-white px-6 py-3 text-2xl font-semibold"
+                class="absolute bottom-0 left-0 w-full text-center py-4 text-white text-2xl font-bold bg-black/40 group-hover:opacity-0 transition-all duration-300"
               >
-                lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                Service 1
               </div>
 
+              <!-- Overlay Sliding Content -->
               <div
-                class="absolute bottom-0 left-0 w-full h-[50%] bg-white rounded-t-[12px] shadow-xl p-6 translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out"
+                class="absolute bottom-[-60%] left-0 w-full h-[60%] bg-black/70 text-white px-8 py-6 transition-all duration-500 group-hover:bottom-0"
               >
-                <h4 class="text-2xl radio">
-                  lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                <h4 class="text-2xl font-bold mb-3">
+                  Lorem Ipsum <span class="text-[#F64B2B]">Service 1</span>
                 </h4>
 
-                <p class="mt-2 text-[18px] raleway leading-snug">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                <p class="text-[16px] leading-[22px] mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti obcaecati maxime autem inventore sapiente quaerat
+                  reprehenderit...
                 </p>
 
+                <!-- Read More Button -->
                 <div
-                  class="flex items-center gap-2 bg-gradient-to-r from-[#F94C2C] to-[#932D1A] px-5 h-[45px] rounded-full cursor-pointer w-fit mt-4"
+                  class="w-[150px] h-[45px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A] flex items-center justify-center gap-2 text-white font-bold"
                 >
                   <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
-                  <p class="text-white font-bold redhat text-[18px]">
-                    Read More
-                  </p>
+                  Read More
                 </div>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div
-              class="relative w-[350px] h-[420px] group overflow-hidden rounded-[12px] mx-auto"
+              class="relative w-[400px] h-[400px] group overflow-hidden rounded-xl cursor-pointer"
             >
+              <!-- Background Image -->
               <img
                 src="assets/images/aboutusimage.jpg"
-                class="h-full w-full object-cover"
+                class="w-full h-full object-cover"
               />
 
+              <!-- Service Name (Visible Always) -->
               <div
-                class="absolute bottom-0 w-full bg-black/50 text-white px-6 py-3 text-2xl font-semibold"
+                class="absolute bottom-0 left-0 w-full text-center py-4 text-white text-2xl font-bold bg-black/40 group-hover:opacity-0 transition-all duration-300"
               >
-                lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                Service 1
               </div>
 
+              <!-- Overlay Sliding Content -->
               <div
-                class="absolute bottom-0 left-0 w-full h-[50%] bg-white rounded-t-[12px] shadow-xl p-6 translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out"
+                class="absolute bottom-[-60%] left-0 w-full h-[60%] bg-black/70 text-white px-8 py-6 transition-all duration-500 group-hover:bottom-0"
               >
-                <h4 class="text-2xl radio">
-                  lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                <h4 class="text-2xl font-bold mb-3">
+                  Lorem Ipsum <span class="text-[#F64B2B]">Service 1</span>
                 </h4>
 
-                <p class="mt-2 text-[18px] raleway leading-snug">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                <p class="text-[16px] leading-[22px] mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti obcaecati maxime autem inventore sapiente quaerat
+                  reprehenderit...
                 </p>
 
+                <!-- Read More Button -->
                 <div
-                  class="flex items-center gap-2 bg-gradient-to-r from-[#F94C2C] to-[#932D1A] px-5 h-[45px] rounded-full cursor-pointer w-fit mt-4"
+                  class="w-[150px] h-[45px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A] flex items-center justify-center gap-2 text-white font-bold"
                 >
                   <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
-                  <p class="text-white font-bold redhat text-[18px]">
-                    Read More
-                  </p>
+                  Read More
                 </div>
               </div>
             </div>
           </div>
           <div class="swiper-slide">
             <div
-              class="relative w-[350px] h-[420px] group overflow-hidden rounded-[12px] mx-auto"
+              class="relative w-[400px] h-[400px] group overflow-hidden rounded-xl cursor-pointer"
             >
+              <!-- Background Image -->
               <img
                 src="assets/images/aboutusimage.jpg"
-                class="h-full w-full object-cover"
+                class="w-full h-full object-cover"
               />
 
+              <!-- Service Name (Visible Always) -->
               <div
-                class="absolute bottom-0 w-full bg-black/50 text-white px-6 py-3 text-2xl font-semibold"
+                class="absolute bottom-0 left-0 w-full text-center py-4 text-white text-2xl font-bold bg-black/40 group-hover:opacity-0 transition-all duration-300"
               >
-                lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                Service 1
               </div>
 
+              <!-- Overlay Sliding Content -->
               <div
-                class="absolute bottom-0 left-0 w-full h-[50%] bg-white rounded-t-[12px] shadow-xl p-6 translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out"
+                class="absolute bottom-[-60%] left-0 w-full h-[60%] bg-black/70 text-white px-8 py-6 transition-all duration-500 group-hover:bottom-0"
               >
-                <h4 class="text-2xl radio">
-                  lorem ipsum <span class="text-[#F64B2B]">service 2</span>
+                <h4 class="text-2xl font-bold mb-3">
+                  Lorem Ipsum <span class="text-[#F64B2B]">Service 1</span>
                 </h4>
 
-                <p class="mt-2 text-[18px] raleway leading-snug">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                <p class="text-[16px] leading-[22px] mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti obcaecati maxime autem inventore sapiente quaerat
+                  reprehenderit...
                 </p>
 
+                <!-- Read More Button -->
                 <div
-                  class="flex items-center gap-2 bg-gradient-to-r from-[#F94C2C] to-[#932D1A] px-5 h-[45px] rounded-full cursor-pointer w-fit mt-4"
+                  class="w-[150px] h-[45px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A] flex items-center justify-center gap-2 text-white font-bold"
                 >
                   <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
-                  <p class="text-white font-bold redhat text-[18px]">
-                    Read More
-                  </p>
+                  Read More
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="relative w-[400px] h-[400px] group overflow-hidden rounded-xl cursor-pointer"
+            >
+              <!-- Background Image -->
+              <img
+                src="assets/images/aboutusimage.jpg"
+                class="w-full h-full object-cover"
+              />
+
+              <!-- Service Name (Visible Always) -->
+              <div
+                class="absolute bottom-0 left-0 w-full text-center py-4 text-white text-2xl font-bold bg-black/40 group-hover:opacity-0 transition-all duration-300"
+              >
+                Service 1
+              </div>
+
+              <!-- Overlay Sliding Content -->
+              <div
+                class="absolute bottom-[-60%] left-0 w-full h-[60%] bg-black/70 text-white px-8 py-6 transition-all duration-500 group-hover:bottom-0"
+              >
+                <h4 class="text-2xl font-bold mb-3">
+                  Lorem Ipsum <span class="text-[#F64B2B]">Service 1</span>
+                </h4>
+
+                <p class="text-[16px] leading-[22px] mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti obcaecati maxime autem inventore sapiente quaerat
+                  reprehenderit...
+                </p>
+
+                <!-- Read More Button -->
+                <div
+                  class="w-[150px] h-[45px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A] flex items-center justify-center gap-2 text-white font-bold"
+                >
+                  <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
+                  Read More
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div
+              class="relative w-[400px] h-[400px] group overflow-hidden rounded-xl cursor-pointer"
+            >
+              <!-- Background Image -->
+              <img
+                src="assets/images/aboutusimage.jpg"
+                class="w-full h-full object-cover"
+              />
+
+              <!-- Service Name (Visible Always) -->
+              <div
+                class="absolute bottom-0 left-0 w-full text-center py-4 text-white text-2xl font-bold bg-black/40 group-hover:opacity-0 transition-all duration-300"
+              >
+                Service 1
+              </div>
+
+              <!-- Overlay Sliding Content -->
+              <div
+                class="absolute bottom-[-60%] left-0 w-full h-[60%] bg-black/70 text-white px-8 py-6 transition-all duration-500 group-hover:bottom-0"
+              >
+                <h4 class="text-2xl font-bold mb-3">
+                  Lorem Ipsum <span class="text-[#F64B2B]">Service 1</span>
+                </h4>
+
+                <p class="text-[16px] leading-[22px] mb-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Corrupti obcaecati maxime autem inventore sapiente quaerat
+                  reprehenderit...
+                </p>
+
+                <!-- Read More Button -->
+                <div
+                  class="w-[150px] h-[45px] rounded-full bg-gradient-to-r from-[#F94C2C] to-[#932D1A] flex items-center justify-center gap-2 text-white font-bold"
+                >
+                  <img src="assets/images/readmorearrow.png" class="w-6 h-6" />
+                  Read More
                 </div>
               </div>
             </div>
