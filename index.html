@@ -8,11 +8,16 @@
     <meta name="robots" content="noindex" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=popin+Canada:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=popin:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
@@ -21,19 +26,26 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
     <style>
-      .radio {
-        font-family: "Radio Canada", sans-serif;
+      .popin {
+        font-family: "popin Canada", sans-serif;
       }
-      .redhat {
+      .popin {
+        font-family: "Poppins", sans-serif;
+      }
+      .popin {
         font-family: "Red Hat Text", sans-serif;
       }
-      .raleway {
-        font-family: "Raleway", sans-serif;
+      .popin {
+        font-family: "popin", sans-serif;
       }
       .shape {
         position: relative;
@@ -64,11 +76,11 @@
       <div class="w-full h-[130px] relative flex justify-center bg-[#033257]">
         <div class="w-[80%] flex justify-end">
           <div class="flex gap-5 items-center">
-            <a class="flex gap-2 radio text-white">
+            <a class="flex gap-2 popin text-white">
               <img src="assets/images/phone.png" class="h-5 w-5" />
               012 03456 7890
             </a>
-            <a class="flex gap-2 radio text-white">
+            <a class="flex gap-2 popin text-white">
               <img src="assets/images/email.png" class="h-5 w-5" />
               loremgmail@gmail.com
             </a>
@@ -115,7 +127,7 @@
           >
             <img src="assets/images/logo.png" class="h-[100px]" />
           </div>
-          <ul class="flex gap-8 justify-end ml-[30px] redhat font-bold w-[60%]">
+          <ul class="flex gap-8 justify-end ml-[30px] popin font-bold w-[60%]">
             <li>HOME</li>
             <a href="about.html">ABOUT</a>
             <a href="service.html">OUR SERVICES</a>
@@ -125,9 +137,9 @@
           </ul>
           <div class="flex justify-end h-full w-[30%]">
             <div
-              class="w-[250px] radio flex gap-2 text-2xl text-white justify-center items-center rounded-tr-[50px] h-full rounded-br-[50px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A]"
+              class="w-[250px] popin flex gap-2 text-[20px] font-bold text-white justify-center items-center rounded-tr-[50px] h-full rounded-br-[50px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A]"
             >
-              <img src="assets/images/CALLICON.png" class="h-10" />
+              <img src="assets/images/CALLICON.png" class="h-8" />
               CALL NOW
             </div>
           </div>
@@ -143,21 +155,21 @@
           class="absolute z-[20] bottom-0"
         />
         <div
-          class="w-[65%] flex flex-col justify-center items-center bg-[#094C80AD] relative z-[10] h-full"
+          class="w-[65%] flex flex-col justify-center items-center bg-[#032845ad] relative z-[10] h-full"
           style="clip-path: polygon(0 0, 100% 0%, 81% 100%, 0% 100%)"
         >
-          <h1 class="text-6xl radio ml-[-90px] text-white">
+          <h1 class="text-5xl popin font-semibold ml-[-80px] text-white">
             Welcome To Our Gas And <br />
             Heating Services
           </h1>
-          <p class="ml-[-80px] text-[16px] raleway text-white mt-5">
+          <p class="ml-[10px] popin text-[16px] popin text-white mt-5">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been <br />
             the industry's standard dummy. the industry's standard dummy.
           </p>
           <div class="w-full mt-10">
             <a
-              class="h-[60px] ml-[100px] text-2xl radio text-white font-bold gap-3 w-[220px] border-[3px] border-white shadow-xl flex justify-center items-center rounded-[40px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A] drop-shadow-[0_5px_15px_#F64B2C]"
+              class="h-[60px] ml-[140px] text-2xl popin text-white font-bold gap-3 w-[220px] border-[3px] border-white shadow-xl flex justify-center items-center rounded-[40px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A] drop-shadow-[0_5px_15px_#F64B2C]"
             >
               <img src="assets/images/call.png" class="h-8" />
               Book Now
@@ -167,8 +179,79 @@
       </div>
     </div>
     <!--header and banner is finished here-->
+
+    <!---form -->
+    <div class="w-full py-14 bg-white relative flex flex-col items-center">
+      <!-- Overlay -->
+      <!-- <div class="absolute inset-0 bg-black/70"></div> -->
+
+      <!-- Content -->
+      <div class="relative z-10 w-[90%] lg:w-[80%]">
+        <h4 class="text-[38px] font-bold popin text-black text-center mb-10">
+          Book Now For <span class="text-[#F94C2C]">Your Services</span>
+        </h4>
+
+        <!-- FORM GRID -->
+        <div class="grid grid-cols-1 popin md:grid-cols-3 gap-5 text-white">
+          <!-- Name -->
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Name"
+              class="w-full px-5 py-3 bg-white border border-black rounded-md outline-none placeholder-[#F94C2C]"
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="relative">
+            <input
+              type="email"
+              placeholder="Your Email"
+              class="w-full px-5 py-3 bg-white border border-black rounded-md outline-none placeholder-[#F94C2C]"
+            />
+          </div>
+
+          <!-- Phone -->
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Phone No."
+              class="w-full px-5 py-3 bg-white border border-black rounded-md outline-none placeholder-[#F94C2C]"
+            />
+          </div>
+
+          <!-- Service Type -->
+          <div class="relative">
+            <select
+              class="w-full px-5 py-3 bg-white border border-black rounded-md outline-none text-[#F94C2C]"
+            >
+              <option class="text-black">Plumbing</option>
+              <option class="text-black">AC Repair</option>
+              <option class="text-black">Electrical</option>
+              <option class="text-black">Installation</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div class="relative md:col-span-1">
+            <input
+              type="text"
+              placeholder="Message"
+              class="w-full px-5 py-3 bg-white border border-black rounded-md outline-none placeholder-[#F94C2C]"
+            />
+          </div>
+
+          <!-- Submit -->
+          <button
+            class="w-full h-[55px] text-[25px] popin border-[3px] border-white bg-[#f94c2c] text-white font-semibold rounded-full shadow-[0_0_12px_#f94c2c] border border-[#ffffff40] flex items-center justify-center tracking-wide hover:bg-[#d13c20] transition"
+          >
+            SUBMIT
+          </button>
+        </div>
+      </div>
+    </div>
     <!---circle section-->
-    <div class="w-full flex py-8 justify-center items-center">
+    <!-- <div class="w-full flex py-8 justify-center items-center">
       <div class="w-[85%] flex gap-[200px] justify-center">
         <div class="flex flex-col items-center">
           <div
@@ -180,7 +263,7 @@
               <img src="assets/images/call.png" class="h-16" />
             </div>
           </div>
-          <p class="text-[#F94C2C] raleway text-[22px] pt-2 font-bold">
+          <p class="text-[#F94C2C] popin text-[22px] pt-2 font-bold">
             Book A Service
           </p>
         </div>
@@ -194,7 +277,7 @@
               <img src="assets/images/call.png" class="h-16" />
             </div>
           </div>
-          <p class="text-[#F94C2C] raleway text-[22px] pt-2 font-bold">
+          <p class="text-[#F94C2C] popin text-[22px] pt-2 font-bold">
             Free Quote
           </p>
         </div>
@@ -208,7 +291,7 @@
               <img src="assets/images/call.png" class="h-16" />
             </div>
           </div>
-          <p class="text-[#F94C2C] raleway text-[22px] pt-2 font-bold">
+          <p class="text-[#F94C2C] popin text-[22px] pt-2 font-bold">
             Special Offer
           </p>
         </div>
@@ -223,48 +306,50 @@
             </div>
           </div>
           <p
-            class="text-[#F94C2C] text-center raleway text-[22px] pt-2 font-bold"
+            class="text-[#F94C2C] text-center popin text-[22px] pt-2 font-bold"
           >
             Call Out Emergency Services
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--circle section end here -->
     <div class="flex w-full">
       <div
         class="w-[50%] bg-center bg-cover bg-[url('assets/images/aboutusimage.jpg')]"
       ></div>
       <div class="w-[50%] bg-[#063152] relative py-10">
-        <p class="radio text-[#F94C2C] mt-10 text-[20px] ml-[30px]">About Us</p>
-        <h2 class="ml-[30px] radio text-[50px] leading-tight text-white">
+        <p class="popin text-[#F94C2C] mt-10 text-[20px] ml-[30px]">About Us</p>
+        <h2
+          class="ml-[30px] popin font-bold text-[37px] leading-tight text-white"
+        >
           Welcome To Our Gas And Heating Services
         </h2>
-        <p class="ml-[30px] text-white raleway mt-10 text-[18px] mr-[40px]">
+        <p class="ml-[30px] text-white popin mt-10 text-[18px] mr-[40px]">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy. Lorem
           Ipsum is simply dummy text of the printing and typesetting industry.
           Lorem Ipsum has been the industry's standard dummy.
         </p>
         <ul class="ml-[30px] mt-10">
-          <li class="flex items-center text-[18px] raleway gap-2 text-white">
+          <li class="flex items-center text-[18px] popin gap-2 text-white">
             <img src="assets/images/bulletponit.png" class="h-6" />
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </li>
           <li
-            class="flex items-center gap-2 text-[18px] raleway mt-[20px] text-white"
+            class="flex items-center gap-2 text-[18px] popin mt-[20px] text-white"
           >
             <img src="assets/images/bulletponit.png" class="h-6" />
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </li>
           <li
-            class="flex items-center gap-2 text-[18px] raleway mt-[20px] text-white"
+            class="flex items-center gap-2 text-[18px] popin mt-[20px] text-white"
           >
             <img src="assets/images/bulletponit.png" class="h-6" />
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </li>
           <li
-            class="flex items-center gap-2 text-[18px] raleway mt-[20px] text-white"
+            class="flex items-center gap-2 text-[18px] popin mt-[20px] text-white"
           >
             <img src="assets/images/bulletponit.png" class="h-6" />
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -272,7 +357,7 @@
         </ul>
         <div class="w-[40%] mt-10 ml-[35px]">
           <a
-            class="h-[60px] text-2xl radio text-white font-bold gap-3 w-[220px] border-[3px] border-white shadow-xl flex justify-center items-center rounded-[40px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A] drop-shadow-[0_3px_15px_#F64B2C]"
+            class="h-[60px] text-2xl popin text-white font-bold gap-3 w-[220px] border-[3px] border-white shadow-xl flex justify-center items-center rounded-[40px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A] drop-shadow-[0_3px_15px_#F64B2C]"
           >
             <img src="assets/images/readmorearrow.png" class="h-12" />
             Read More
@@ -285,174 +370,280 @@
       </div>
     </div>
 
-    <!---form -->
-    <div
-      class="w-full py-14 bg-center bg-cover bg-[url('assets/images/ctabanner.jpg')] relative flex flex-col items-center"
-    >
-      <!-- Overlay -->
-      <div class="absolute inset-0 bg-black/70"></div>
-
-      <!-- Content -->
-      <div class="relative z-10 w-[90%] lg:w-[80%]">
-        <h4 class="text-[38px] Radio text-white text-center mb-10">
-          Book Now For Your Services
-        </h4>
-
-        <!-- FORM GRID -->
-        <div class="grid grid-cols-1 raleway md:grid-cols-3 gap-5 text-white">
-          <!-- Name -->
-          <div class="relative">
-            <input
-              type="text"
-              placeholder="Name"
-              class="w-full px-5 py-3 bg-transparent border border-white/60 rounded-md outline-none placeholder-white"
-            />
-          </div>
-
-          <!-- Email -->
-          <div class="relative">
-            <input
-              type="email"
-              placeholder="Your Email"
-              class="w-full px-5 py-3 bg-transparent border border-white/60 rounded-md outline-none placeholder-white"
-            />
-          </div>
-
-          <!-- Phone -->
-          <div class="relative">
-            <input
-              type="text"
-              placeholder="Phone No."
-              class="w-full px-5 py-3 bg-transparent border border-white/60 rounded-md outline-none placeholder-white"
-            />
-          </div>
-
-          <!-- Service Type -->
-          <div class="relative">
-            <select
-              class="w-full px-5 py-3 bg-transparent border border-white/60 rounded-md outline-none text-white"
-            >
-              <option class="text-black">Plumbing</option>
-              <option class="text-black">AC Repair</option>
-              <option class="text-black">Electrical</option>
-              <option class="text-black">Installation</option>
-            </select>
-          </div>
-
-          <!-- Message -->
-          <div class="relative md:col-span-1">
-            <input
-              type="text"
-              placeholder="Message"
-              class="w-full px-5 py-3 bg-transparent border border-white/60 rounded-md outline-none placeholder-white"
-            />
-          </div>
-
-          <!-- Submit -->
-          <button
-            class="w-full h-[55px] text-[25px] radio border-[3px] border-white bg-[#f94c2c] text-white font-semibold rounded-full shadow-[0_0_12px_#f94c2c] border border-[#ffffff40] flex items-center justify-center tracking-wide hover:bg-[#d13c20] transition"
+    <section class="w-full py-16 bg-white">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-center"
+      >
+        <!-- CARD 1 -->
+        <div class="flex flex-col items-center">
+          <img
+            src="assets/images/manwithsome.png"
+            alt="Profitable Future"
+            class="w-[150px] mb-4"
+          />
+          <h3
+            class="text-xl font-semibold mt-[-35px] text-[#333] leading-tight"
           >
-            SUBMIT
-          </button>
+            We Build a <br />
+            Profitable Future
+          </h3>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="flex flex-col items-center">
+          <img
+            src="assets/images/thumbs.png"
+            alt="Business Responsibly"
+            class="mb-4 w-[150px]"
+          />
+          <h3
+            class="text-xl font-semibold mt-[-40px] text-[#333] leading-tight"
+          >
+            We Do Business <br />
+            Responsibly
+          </h3>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="flex flex-col items-center">
+          <img
+            src="assets/images/threeman.png"
+            alt="Great Teams"
+            class="mb-4 w-[150px]"
+          />
+          <h3
+            class="text-xl font-semibold mt-[-40px] text-[#333] leading-tight"
+          >
+            We Create Great <br />
+            Teams
+          </h3>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="flex flex-col items-center">
+          <img
+            src="assets/images/twoman.png"
+            alt="Customer Excellence"
+            class="mb-4 w-[150px]"
+          />
+          <h3
+            class="text-xl font-semibold mt-[-40px] text-[#333] leading-tight"
+          >
+            Deliver Excellence <br />
+            to our Customers
+          </h3>
         </div>
       </div>
-    </div>
+    </section>
 
     <section class="w-full py-16 flex justify-center items-center bg-white">
       <div class="w-[85%] mx-auto">
         <!-- Top Heading -->
-        <p class="text-[#F94C2C] text-center radio text-[23px]">Our Services</p>
+        <p class="text-[#F94C2C] text-center popin font-bold text-[23px]">
+          Our Services
+        </p>
 
         <h3
-          class="text-center text-[#033257] text-[50px] radio leading-tight mt-2"
+          class="text-center text-[#033257] text-[40px] font-bold popin leading-tight mt-2"
         >
           Welcome To Our Gas And<br />Heating Services
         </h3>
 
-        <p class="text-center text-[19px] raleway mt-3 text-gray-600">
+        <p class="text-center text-[20px] popin mt-3 text-gray-600">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been <br />
           the industry's standard dummy.
         </p>
 
-        <!-- Cards Row -->
-        <div class="w-full mt-10 flex justify-center">
-          <div class="flex gap-16">
-            <!-- CARD 1 -->
-            <div
-              class="w-[300px] rounded-[20px] h-[450px] bg-center bg-cover relative overflow-hidden shadow-lg"
-              style="background-image: url('assets/images/aboutusimage.jpg')"
-            >
-              <!-- Red overlay -->
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-[#F94C2C]/80 to-transparent rounded-[20px]"
-              ></div>
+        <div class="w-full mt-10">
+          <div class="swiper mySwiper w-[90%] mx-auto">
+            <div class="swiper-wrapper">
+              <!-- CARD 1 -->
+              <div class="swiper-slide">
+                <div
+                  class="w-[360px] rounded-[20px] h-[450px] bg-center bg-cover relative overflow-hidden shadow-lg"
+                  style="
+                    background-image: url('assets/images/aboutusimage.jpg');
+                  "
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#F94C2C]/80 to-transparent rounded-[20px]"
+                  ></div>
 
-              <!-- Shape Image -->
-              <img
-                src="assets/images/serviceshape.png"
-                class="absolute bottom-0 w-full z-[5]"
-              />
+                  <img
+                    src="assets/images/serviceshape.png"
+                    class="absolute bottom-0 w-full z-[5]"
+                  />
 
-              <!-- Content -->
-              <div class="absolute bottom-6 left-6 z-[10]">
-                <p class="text-white radio text-[25px] mb-2">
-                  Gas Leak Detection
-                </p>
+                  <div class="absolute bottom-6 left-6 z-[10]">
+                    <p class="text-white font-bold text-[23px] popin mb-2">
+                      Gas Leak Detection
+                    </p>
 
-                <div class="flex items-center gap-2 text-white cursor-pointer">
-                  <img src="assets/images/readmorearrow.png" class="h-10" />
-                  <span class="font-semibold raleway">READ MORE</span>
+                    <div
+                      class="flex items-center gap-2 text-white cursor-pointer"
+                    >
+                      <img src="assets/images/readmorearrow.png" class="h-10" />
+                      <span class="font-semibold popin">READ MORE</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- CARD 2 -->
-            <div
-              class="w-[300px] rounded-[20px] h-[450px] bg-center bg-cover relative overflow-hidden shadow-lg"
-              style="background-image: url('assets/images/aboutusimage.jpg')"
-            >
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-[#F94C2C]/80 to-transparent rounded-[20px]"
-              ></div>
-              <img
-                src="assets/images/serviceshape.png"
-                class="absolute bottom-0 w-full z-[5]"
-              />
+              <!-- CARD 2 -->
+              <div class="swiper-slide">
+                <div
+                  class="w-[360px] rounded-[20px] h-[450px] bg-center bg-cover relative overflow-hidden shadow-lg"
+                  style="
+                    background-image: url('assets/images/aboutusimage.jpg');
+                  "
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#F94C2C]/80 to-transparent rounded-[20px]"
+                  ></div>
 
-              <div class="absolute bottom-6 left-6 z-[10]">
-                <p class="text-white radio text-[25px] mb-2">
-                  Gas Appliances Installation
-                </p>
+                  <img
+                    src="assets/images/serviceshape.png"
+                    class="absolute bottom-0 w-full z-[5]"
+                  />
 
-                <div class="flex items-center gap-2 text-white cursor-pointer">
-                  <img src="assets/images/readmorearrow.png" class="h-10" />
-                  <span class="font-semibold raleway">READ MORE</span>
+                  <div class="absolute bottom-6 left-6 z-[10]">
+                    <p class="text-white font-bold text-[23px] popin mb-2">
+                      Gas Leak Detection
+                    </p>
+
+                    <div
+                      class="flex items-center gap-2 text-white cursor-pointer"
+                    >
+                      <img src="assets/images/readmorearrow.png" class="h-10" />
+                      <span class="font-semibold popin">READ MORE</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- CARD 3 -->
-            <div
-              class="w-[300px] rounded-[20px] h-[450px] bg-center bg-cover relative overflow-hidden shadow-lg"
-              style="background-image: url('assets/images/aboutusimage.jpg')"
-            >
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-[#F94C2C]/80 to-transparent rounded-[20px]"
-              ></div>
-              <img
-                src="assets/images/serviceshape.png"
-                class="absolute bottom-0 w-full z-[5]"
-              />
+              <!-- CARD 3 -->
+              <div class="swiper-slide">
+                <div
+                  class="w-[360px] rounded-[20px] h-[450px] bg-center bg-cover relative overflow-hidden shadow-lg"
+                  style="
+                    background-image: url('assets/images/aboutusimage.jpg');
+                  "
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#F94C2C]/80 to-transparent rounded-[20px]"
+                  ></div>
 
-              <div class="absolute bottom-6 left-6 z-[10]">
-                <p class="text-white text-[25px] radio mb-2">
-                  Gas Leak Detection
-                </p>
+                  <img
+                    src="assets/images/serviceshape.png"
+                    class="absolute bottom-0 w-full z-[5]"
+                  />
 
-                <div class="flex items-center gap-2 text-white cursor-pointer">
-                  <img src="assets/images/readmorearrow.png" class="h-10" />
-                  <span class="font-semibold raleway">READ MORE</span>
+                  <div class="absolute bottom-6 left-6 z-[10]">
+                    <p class="text-white font-bold text-[23px] popin mb-2">
+                      Gas Leak Detection
+                    </p>
+
+                    <div
+                      class="flex items-center gap-2 text-white cursor-pointer"
+                    >
+                      <img src="assets/images/readmorearrow.png" class="h-10" />
+                      <span class="font-semibold popin">READ MORE</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CARD 3 -->
+              <div class="swiper-slide">
+                <div
+                  class="w-[360px] rounded-[20px] h-[450px] bg-center bg-cover relative overflow-hidden shadow-lg"
+                  style="
+                    background-image: url('assets/images/aboutusimage.jpg');
+                  "
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#F94C2C]/80 to-transparent rounded-[20px]"
+                  ></div>
+
+                  <img
+                    src="assets/images/serviceshape.png"
+                    class="absolute bottom-0 w-full z-[5]"
+                  />
+
+                  <div class="absolute bottom-6 left-6 z-[10]">
+                    <p class="text-white font-bold text-[23px] popin mb-2">
+                      Gas Leak Detection
+                    </p>
+
+                    <div
+                      class="flex items-center gap-2 text-white cursor-pointer"
+                    >
+                      <img src="assets/images/readmorearrow.png" class="h-10" />
+                      <span class="font-semibold popin">READ MORE</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CARD 3 -->
+              <div class="swiper-slide">
+                <div
+                  class="w-[360px] rounded-[20px] h-[450px] bg-center bg-cover relative overflow-hidden shadow-lg"
+                  style="
+                    background-image: url('assets/images/aboutusimage.jpg');
+                  "
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#F94C2C]/80 to-transparent rounded-[20px]"
+                  ></div>
+
+                  <img
+                    src="assets/images/serviceshape.png"
+                    class="absolute bottom-0 w-full z-[5]"
+                  />
+
+                  <div class="absolute bottom-6 left-6 z-[10]">
+                    <p class="text-white font-bold text-[23px] popin mb-2">
+                      Gas Leak Detection
+                    </p>
+
+                    <div
+                      class="flex items-center gap-2 text-white cursor-pointer"
+                    >
+                      <img src="assets/images/readmorearrow.png" class="h-10" />
+                      <span class="font-semibold popin">READ MORE</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- CARD 3 -->
+              <div class="swiper-slide">
+                <div
+                  class="w-[360px] rounded-[20px] h-[450px] bg-center bg-cover relative overflow-hidden shadow-lg"
+                  style="
+                    background-image: url('assets/images/aboutusimage.jpg');
+                  "
+                >
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-[#F94C2C]/80 to-transparent rounded-[20px]"
+                  ></div>
+
+                  <img
+                    src="assets/images/serviceshape.png"
+                    class="absolute bottom-0 w-full z-[5]"
+                  />
+
+                  <div class="absolute bottom-6 left-6 z-[10]">
+                    <p class="text-white font-bold text-[23px] popin mb-2">
+                      Gas Leak Detection
+                    </p>
+
+                    <div
+                      class="flex items-center gap-2 text-white cursor-pointer"
+                    >
+                      <img src="assets/images/readmorearrow.png" class="h-10" />
+                      <span class="font-semibold popin">READ MORE</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -508,7 +699,7 @@
 
         <!-- Heading -->
         <h2
-          class="text-white leading-tight radio text-[32px] lg:text-[50px] text-center mt-4"
+          class="text-white leading-tight popin font-bold text-[30px] lg:text-[40px] text-center mt-4"
         >
           Connect With Us For Your<br />Emergency Services
         </h2>
@@ -523,9 +714,13 @@
         class="w-[80%] bg-[#fee9e5] rounded-[20px] shape relative overflow-hidden p-10 z-10"
       >
         <div class="relative z-10">
-          <p class="text-[#F94C2C] text-2xl radio">Why Choose Us ?</p>
+          <p class="text-[#F94C2C] text-[25px] font-bold popin">
+            Why Choose Us ?
+          </p>
 
-          <h2 class="text-[#033257] text-[45px] radio leading-tight mb-6">
+          <h2
+            class="text-[#033257] text-[40px] font-bold popin leading-tight mb-6"
+          >
             Welcome To Our Gas And<br />Heating Services
           </h2>
 
@@ -537,10 +732,10 @@
               <img src="assets/images/certification.png" class="w-10" />
             </div>
             <div>
-              <h3 class="text-[24px] radio">
+              <h3 class="text-[24px] popin font-bold">
                 Certified and Experienced Technicians
               </h3>
-              <p class="text-gray-700 text-[20px] raleway">
+              <p class="text-gray-700 text-[20px] popin">
                 Lorem Ipsum is simply dummy text of the printing industry.
               </p>
             </div>
@@ -554,10 +749,10 @@
               <img src="assets/images/pricetag.png" class="w-10" />
             </div>
             <div>
-              <h3 class="text-[24px] radio">
+              <h3 class="text-[24px] popin font-bold">
                 Transparent Pricing - No Hidden Fees
               </h3>
-              <p class="text-gray-700 text-[20px] raleway">
+              <p class="text-gray-700 text-[20px] popin">
                 Lorem Ipsum is simply dummy text of the printing industry.
               </p>
             </div>
@@ -571,8 +766,10 @@
               <img src="assets/images/clock.png" class="w-10" />
             </div>
             <div>
-              <h3 class="text-[25px] radio">24/7 Emergency Service</h3>
-              <p class="text-gray-700 text-[20px] raleway">
+              <h3 class="text-[25px] popin font-bold">
+                24/7 Emergency Service
+              </h3>
+              <p class="text-gray-700 text-[20px] popin">
                 Lorem Ipsum is simply dummy text of the printing industry.
               </p>
             </div>
@@ -589,7 +786,7 @@
 
     <!---frequently ask-->
     <section class="py-16">
-      <h2 class="text-center text-[50px] radio text-[#033257] mb-10">
+      <h2 class="text-center font-bold text-[40px] popin text-[#033257] mb-10">
         Frequently Asked Questions
       </h2>
 
@@ -597,7 +794,7 @@
         <!-- FAQ ITEM 1 -->
         <div class="faq-item border rounded-xl overflow-hidden shadow-sm">
           <button
-            class="faq-header w-full radio text-left px-6 py-4 flex justify-between items-center bg-gradient-to-r from-[#932D1A] to-[#F94C2C] text-white text-[22px]"
+            class="faq-header w-full popin font-bold text-left px-6 py-4 flex justify-between items-center bg-gradient-to-r from-[#932D1A] to-[#F94C2C] text-white text-[19px]"
           >
             <span
               >1. Lorem Ipsum is simply dummy text of the printing and
@@ -607,7 +804,7 @@
           </button>
 
           <div class="faq-content bg-white px-6">
-            <p class="py-4 text-gray-700 raleway text-[20px]">
+            <p class="py-4 text-gray-700 popin text-[20px]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy.
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -621,7 +818,7 @@
           class="faq-item border bg-[#FFF2F2] border-[#F94C2C94] rounded-xl overflow-hidden shadow-sm"
         >
           <button
-            class="faq-header w-full text-left px-6 py-4 flex justify-between items-center text-[#033257] radio text-[22px]"
+            class="faq-header w-full text-left px-6 py-4 flex justify-between items-center text-black popin font-bold text-[20px]"
           >
             <span
               >2. Lorem Ipsum is simply dummy text of the printing and
@@ -631,7 +828,7 @@
           </button>
 
           <div class="faq-content bg-white px-6">
-            <p class="py-4 text-gray-700 text-[20px] raleway">
+            <p class="py-4 text-gray-700 text-[20px] popin">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
@@ -643,7 +840,7 @@
           class="faq-item border bg-[#FFF2F2] border-[#F94C2C94] rounded-xl overflow-hidden shadow-sm"
         >
           <button
-            class="faq-header w-full text-left px-6 py-4 flex justify-between items-center text-[#033257] radio text-[22px]"
+            class="faq-header w-full text-left px-6 py-4 flex justify-between items-center text-black font-bold popin text-[20px]"
           >
             <span
               >3. Lorem Ipsum is simply dummy text of the printing and
@@ -653,7 +850,7 @@
           </button>
 
           <div class="faq-content bg-white px-6">
-            <p class="py-4 text-gray-700 text-[20px] raleway">
+            <p class="py-4 text-gray-700 text-[20px] popin">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
@@ -665,8 +862,12 @@
     <section class="py-16">
       <!-- TOP TITLE -->
       <div class="text-center mb-12">
-        <p class="text-[#f94c2c] text-[25px] radio">Our Latest Blog</p>
-        <h2 class="text-4xl lg:text-5xl radio text-[#033257] leading-snug">
+        <p class="text-[#f94c2c] text-[25px] popin font-bold mb-[10px]">
+          Our Latest Blog
+        </p>
+        <h2
+          class="text-4xl lg:text-[40px] popin font-bold text-[#033257] leading-snug"
+        >
           Welcome To Our Gas And <br />
           Heating Services
         </h2>
@@ -686,21 +887,21 @@
           <div class="bg-[#F94C2C] w-[80%] p-6 rounded-t-2xl relative -mt-10">
             <!-- DATE TAG -->
             <span
-              class="absolute w-[200px] redhat -top-4 left-0 bg-[#FFFFFF] text-[#F94C2C] text-[20px] px-4 py-1 rounded-tr-[20px] rounded-br-[20px] shadow"
+              class="absolute w-[200px] popin -top-4 left-0 bg-[#FFFFFF] text-[#F94C2C] text-[20px] px-4 py-1 rounded-tr-[20px] popin rounded-br-[20px] shadow"
             >
               July 27, 2025
             </span>
 
-            <h3 class="text-white text-2xl radio mt-6">
+            <h3 class="text-white text-2xl font-bold popin mt-6">
               The Best Gas services Blog Is Here
             </h3>
 
-            <p class="text-white mt-3 raleway leading-relaxed text-[18px]">
+            <p class="text-white mt-3 popin leading-relaxed text-[19px]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
 
-            <p class="mt-5 font-bold text-white cursor-pointer redhat">
+            <p class="mt-5 font-bold text-white cursor-pointer popin">
               READ MORE
             </p>
           </div>
@@ -716,21 +917,21 @@
           <div class="bg-[#F94C2C] w-[80%] p-6 rounded-t-2xl relative -mt-10">
             <!-- DATE TAG -->
             <span
-              class="absolute w-[200px] redhat -top-4 left-0 bg-[#FFFFFF] text-[#F94C2C] text-[20px] px-4 py-1 rounded-tr-[20px] rounded-br-[20px] shadow"
+              class="absolute w-[200px] popin -top-4 left-0 bg-[#FFFFFF] text-[#F94C2C] text-[20px] px-4 py-1 rounded-tr-[20px] popin rounded-br-[20px] shadow"
             >
               July 27, 2025
             </span>
 
-            <h3 class="text-white text-2xl radio mt-6">
+            <h3 class="text-white text-2xl font-bold popin mt-6">
               The Best Gas services Blog Is Here
             </h3>
 
-            <p class="text-white mt-3 raleway leading-relaxed text-[18px]">
+            <p class="text-white mt-3 popin leading-relaxed text-[19px]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
 
-            <p class="mt-5 font-bold text-white cursor-pointer redhat">
+            <p class="mt-5 font-bold text-white cursor-pointer popin">
               READ MORE
             </p>
           </div>
@@ -746,21 +947,21 @@
           <div class="bg-[#F94C2C] w-[80%] p-6 rounded-t-2xl relative -mt-10">
             <!-- DATE TAG -->
             <span
-              class="absolute w-[200px] redhat -top-4 left-0 bg-[#FFFFFF] text-[#F94C2C] text-[20px] px-4 py-1 rounded-tr-[20px] rounded-br-[20px] shadow"
+              class="absolute w-[200px] popin -top-4 left-0 bg-[#FFFFFF] text-[#F94C2C] text-[20px] px-4 py-1 rounded-tr-[20px] popin rounded-br-[20px] shadow"
             >
               July 27, 2025
             </span>
 
-            <h3 class="text-white text-2xl radio mt-6">
+            <h3 class="text-white text-2xl font-bold popin mt-6">
               The Best Gas services Blog Is Here
             </h3>
 
-            <p class="text-white mt-3 raleway leading-relaxed text-[18px]">
+            <p class="text-white mt-3 popin leading-relaxed text-[19px]">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
 
-            <p class="mt-5 font-bold text-white cursor-pointer redhat">
+            <p class="mt-5 font-bold text-white cursor-pointer popin">
               READ MORE
             </p>
           </div>
@@ -768,53 +969,81 @@
       </div>
     </section>
     <!---city-->
-    <section class="py-16 bg-[#FFF2F2]">
-      <!-- HEADINGS -->
-      <div class="text-center mb-10">
-        <p class="text-[#f94c2c] text-[25px] pb-5 radio">We Cover</p>
-        <h2
-          class="text-3xl md:text-4xl lg:text-5xl radio text-[#033257] leading-snug"
-        >
-          Welcome To Our Gas And <br />
-          Heating Services
-        </h2>
-      </div>
+    <section
+      class="relative py-20 w-full bg-[#FFF2F2] flex justify-center overflow-hidden"
+    >
+      <div class="w-[90%] max-w-6xl relative z-10">
+        <!-- Heading -->
+        <div class="text-center mb-12">
+          <h4 class="text-[40px] font-bold text-[#033257] popin">
+            Areas We Cover
+          </h4>
+          <p class="mt-3 text-gray-600 text-[22px] popin max-w-xl mx-auto">
+            Providing reliable and professional services across multiple
+            locations with fast response times.
+          </p>
+        </div>
 
-      <!-- BUTTONS -->
-      <div class="flex flex-wrap justify-center gap-16 px-5">
-        <!-- BUTTON 1 -->
-        <button
-          class="bg-[#033257] text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2"
-        >
-          <span><img src="assets/images/location.png" class="h-6" /></span>
-          Bradford
-        </button>
+        <!-- Map Card -->
+        <div class="relative p-8">
+          <!-- Map -->
+          <div class="relative">
+            <img
+              src="assets/images/map.png"
+              alt="Service coverage map"
+              class="w-full h-[420px] object-cover rounded-[20px]"
+            />
 
-        <!-- BUTTON 2 -->
-        <button
-          class="bg-[#033257] text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2"
-        >
-          <span><img src="assets/images/location.png" class="h-6" /></span>
-          Bradford
-        </button>
-
-        <!-- BUTTON 3 -->
-        <button
-          class="bg-[#033257] text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2"
-        >
-          <span><img src="assets/images/location.png" class="h-6" /></span>
-          Bradford
-        </button>
-
-        <!-- BUTTON 4 -->
-        <button
-          class="bg-[#033257] text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2"
-        >
-          <span><img src="assets/images/location.png" class="h-6" /></span>
-          Bradford
-        </button>
+            <!-- Location Pin -->
+            <div class="absolute top-[45%] left-[50%]">
+              <div
+                class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#F24A2B] to-[#9E311C] flex items-center justify-center shadow-xl"
+              >
+                <img
+                  src="assets/images/location.png"
+                  alt="Location Pin"
+                  class="w-6 h-6"
+                />
+              </div>
+            </div>
+            <div class="absolute top-[55%] left-[30%]">
+              <div
+                class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#F24A2B] to-[#9E311C] flex items-center justify-center shadow-xl"
+              >
+                <img
+                  src="assets/images/location.png"
+                  alt="Location Pin"
+                  class="w-6 h-6"
+                />
+              </div>
+            </div>
+            <div class="absolute top-[25%] left-[20%]">
+              <div
+                class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#F24A2B] to-[#9E311C] flex items-center justify-center shadow-xl"
+              >
+                <img
+                  src="assets/images/location.png"
+                  alt="Location Pin"
+                  class="w-6 h-6"
+                />
+              </div>
+            </div>
+            <div class="absolute top-[25%] left-[70%]">
+              <div
+                class="w-12 h-12 rounded-full bg-gradient-to-tr from-[#F24A2B] to-[#9E311C] flex items-center justify-center shadow-xl"
+              >
+                <img
+                  src="assets/images/location.png"
+                  alt="Location Pin"
+                  class="w-6 h-6"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
     <footer class="footer-background bg-[#063559] pt-20">
       <div
         class="footer-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 text-white"
@@ -826,7 +1055,7 @@
             <div class="flex items-center space-x-2 mb-4">
               <img src="assets/images/footerlogo.png" class="h-[140px]" />
             </div>
-            <p class="text-[16px] text-gray-300 radio mb-6 max-w-xs">
+            <p class="text-[16px] text-gray-300 popin mb-6 max-w-xs">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard.
             </p>
@@ -863,8 +1092,8 @@
           </div>
 
           <div class="ml-10">
-            <h4 class="text-[24px] radio font-semibold mb-6">Quick Links</h4>
-            <ul class="space-y-3 radio text-[20px]">
+            <h4 class="text-[24px] popin font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-3 popin text-[20px]">
               <li
                 class="flex items-start text-gray-300 hover:text-red-500 transition duration-150"
               >
@@ -917,35 +1146,35 @@
           </div>
 
           <div>
-            <h4 class="text-[24px] radio font-semibold mb-6">Contact Info</h4>
+            <h4 class="text-[24px] popin font-semibold mb-6">Contact Info</h4>
             <div class="space-y-4">
               <div class="flex items-start text-gray-300">
                 <i
                   class="fas fa-map-marker-alt text-red-500 text-lg mt-1 mr-3"
                 ></i>
-                <p class="text-[18px] radio">
+                <p class="text-[18px] popin">
                   32 Lorem Rd, Lorem BR2 8BA, United Kingdom
                 </p>
               </div>
               <div class="flex items-center text-gray-300">
                 <i class="fas fa-envelope text-red-500 text-lg mr-3"></i>
-                <p class="text-[18px] radio">Loremtest@gmail.com</p>
+                <p class="text-[18px] popin">Loremtest@gmail.com</p>
               </div>
               <div class="flex items-center text-gray-300">
                 <i class="fas fa-phone-alt text-red-500 text-lg mr-3"></i>
-                <p class="text-[18px] radio">0123-4567-6065</p>
+                <p class="text-[18px] popin">0123-4567-6065</p>
               </div>
             </div>
           </div>
 
           <div>
-            <h4 class="text-[24px] radio font-semibold mb-6">Working Hours</h4>
+            <h4 class="text-[24px] popin font-semibold mb-6">Working Hours</h4>
             <div class="space-y-4">
-              <p class="text-gray-300 radio text-[18px]">
+              <p class="text-gray-300 popin text-[18px]">
                 <span class="font-semibold text-white">Monday to Friday:</span>
                 8am to 8pm
               </p>
-              <p class="text-gray-300 radio text-[18px]">
+              <p class="text-gray-300 popin text-[18px]">
                 <span class="font-semibold text-white">Saturday-Sunday:</span>
                 9am to 5pm
               </p>
@@ -953,11 +1182,45 @@
           </div>
         </div>
 
-        <div class="text-center text-[18px] radio pt-8 text-gray-400">
+        <div class="text-center text-[18px] popin pt-8 text-gray-400">
           &copy; 2025 All Rights Reserved Lorem Ipsum Services
         </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        // RESPONSIVE
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
 
     <script>
       const faqItems = document.querySelectorAll(".faq-item");

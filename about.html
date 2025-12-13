@@ -233,54 +233,100 @@
     </section>
 
     <!---transparency -->
-    <div class="w-full flex justify-center items-center py-10">
+    <div class="w-full cursor-pointer flex justify-center items-center py-10">
       <div class="w-[90%] grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Card 1 -->
-        <div class="p-8 bg-[#F7FAFE] rounded-xl shadow-sm">
-          <div class="flex justify-between items-center">
-            <h2 class="text-3xl text-black radio">Quality</h2>
+        <!-- Card -->
+        <div
+          class="group p-8 bg-[#F7FAFE] rounded-xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:bg-white relative overflow-hidden"
+        >
+          <!-- Glow Border -->
+          <span
+            class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+            style="box-shadow: 0 0 0 2px rgba(245, 75, 43, 0.25)"
+          ></span>
+
+          <div class="flex justify-between items-center relative z-10">
+            <h2
+              class="text-3xl text-black radio transition-colors duration-300 group-hover:text-[#9E311C]"
+            >
+              Quality
+            </h2>
+
             <div
-              class="w-10 h-10 rounded-full flex justify-center items-center text-white font-bold shadow-md"
+              class="w-10 h-10 rounded-full flex justify-center items-center text-white font-bold shadow-md transition-all duration-300 group-hover:scale-110 group-hover:rotate-6"
               style="background: linear-gradient(135deg, #f54b2b, #982e1b)"
             >
               ★
             </div>
           </div>
-          <p class="mt-4 text-gray-700 leading-relaxed raleway">
+
+          <p
+            class="mt-4 text-gray-700 leading-relaxed raleway transition-colors duration-300 group-hover:text-gray-900"
+          >
             We deliver top-notch workmanship on every project, using the latest
             tools and techniques to ensure lasting results.
           </p>
         </div>
 
         <!-- Card 2 -->
-        <div class="p-8 bg-[#F7FAFE] rounded-xl shadow-sm">
-          <div class="flex justify-between items-center">
-            <h2 class="text-3xl fn text-black radio">Transparency</h2>
+        <div
+          class="group p-8 bg-[#F7FAFE] rounded-xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:bg-white relative overflow-hidden"
+        >
+          <span
+            class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+            style="box-shadow: 0 0 0 2px rgba(245, 75, 43, 0.25)"
+          ></span>
+
+          <div class="flex justify-between items-center relative z-10">
+            <h2
+              class="text-3xl text-black radio transition-colors duration-300 group-hover:text-[#9E311C]"
+            >
+              Transparency
+            </h2>
+
             <div
-              class="w-10 h-10 rounded-full flex justify-center items-center text-white font-bold shadow-md"
+              class="w-10 h-10 rounded-full flex justify-center items-center text-white font-bold shadow-md transition-all duration-300 group-hover:scale-110 group-hover:-rotate-6"
               style="background: linear-gradient(135deg, #f54b2b, #982e1b)"
             >
               $
             </div>
           </div>
-          <p class="mt-4 text-gray-700 raleway leading-relaxed">
+
+          <p
+            class="mt-4 text-gray-700 raleway leading-relaxed transition-colors duration-300 group-hover:text-gray-900"
+          >
             Our competitive rates come with no hidden fees. You'll receive
             upfront costs before any work begins, giving you peace of mind.
           </p>
         </div>
 
         <!-- Card 3 -->
-        <div class="p-8 bg-[#F7FAFE] rounded-xl shadow-sm">
-          <div class="flex justify-between items-center">
-            <h2 class="text-3xl text-black radio">Satisfaction</h2>
+        <div
+          class="group p-8 bg-[#F7FAFE] rounded-xl shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:bg-white relative overflow-hidden"
+        >
+          <span
+            class="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+            style="box-shadow: 0 0 0 2px rgba(245, 75, 43, 0.25)"
+          ></span>
+
+          <div class="flex justify-between items-center relative z-10">
+            <h2
+              class="text-3xl text-black radio transition-colors duration-300 group-hover:text-[#9E311C]"
+            >
+              Satisfaction
+            </h2>
+
             <div
-              class="w-10 h-10 rounded-full flex justify-center items-center text-white font-bold shadow-md"
+              class="w-10 h-10 rounded-full flex justify-center items-center text-white font-bold shadow-md transition-all duration-300 group-hover:scale-110 group-hover:rotate-12"
               style="background: linear-gradient(135deg, #f54b2b, #982e1b)"
             >
               <i class="fa-solid fa-star"></i>
             </div>
           </div>
-          <p class="mt-4 text-gray-700 raleway leading-relaxed">
+
+          <p
+            class="mt-4 text-gray-700 raleway leading-relaxed transition-colors duration-300 group-hover:text-gray-900"
+          >
             Your satisfaction is our top priority. We strive to exceed
             expectations by providing exceptional customer service and clear
             communication throughout.
@@ -665,7 +711,7 @@
     </section>
 
     <section
-      class="relative bg-[#f5f9ff] py-10 h-[80vh] overflow-hidden bg-center bg-cover bg-[url('assets/images/bannerimage.png')]"
+      class="relative bg-[#f5f9ff] py-10 h-[80vh] overflow-hidden bg-top bg-cover bg-[url('assets/images/bannerimage.png')]"
     >
       <div
         class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 bg-white shadow-lg rounded-xl p-10 z-10"
