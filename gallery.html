@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dynamic Gallery Design</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="robots" content="noindex" />
 
@@ -15,23 +15,22 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- LightGallery CSS (required) -->
-    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css"
     />
 
     <style>
+      /* --- Base Typography --- */
       .radio {
         font-family: "Radio Canada", sans-serif;
       }
@@ -41,98 +40,186 @@
       .raleway {
         font-family: "Raleway", sans-serif;
       }
-      .shape {
+
+      /* --- Navigation Enhancement (Subtle 3D Lift) --- */
+      .nav-container {
+        /* Introduce perspective to the absolute parent */
+        perspective: 1000px;
+      }
+      .floating-nav {
+        /* Apply a slight rotation to make it pop out */
+        transform: rotateX(-2deg) translateY(0px);
+        transition: transform 0.5s ease-out;
+      }
+
+      /* --- Filter Buttons ENHANCEMENTS (Updated) --- */
+      .filter-btn {
+        /* Base styles - make transition cover shadow and lift */
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        cursor: pointer;
+        border-radius: 9999px;
+        /* Initial lift and shadow for 3D look */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transform: translateY(0);
+      }
+
+      /* Non-Active State (Blue Gradient) */
+      .filter-btn:not(.active) {
+        background-image: linear-gradient(
+          to right,
+          #033257,
+          #076ebd
+        ) !important;
+        color: white;
+      }
+
+      /* Hover State (Non-Active) - Give it a lift and blue glow */
+      .filter-btn:not(.active):hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(7, 110, 189, 0.6);
+      }
+
+      /* Active State (Red Gradient) */
+      .filter-btn.active {
+        background-image: linear-gradient(
+          to right,
+          #f94c2c,
+          #932d1a
+        ) !important;
+        outline: 3px solid rgba(249, 76, 44, 0.5);
+        /* More pronounced scaling and lift with strong red glow */
+        transform: scale(1.05) translateY(-2px);
+        box-shadow: 0 10px 20px rgba(249, 76, 44, 0.8);
+      }
+
+      /* --- TRUE MASONRY COLUMN LAYOUT --- */
+      #lightgallery {
+        column-count: 3;
+        column-gap: 20px;
+        width: 100%;
+        padding: 0;
+      }
+
+      /* --- GALLERY ITEM ENHANCEMENT (3D TILT EFFECT) --- */
+      .gallery-item {
+        break-inside: avoid;
+        margin-bottom: 20px;
         position: relative;
-      }
-
-      .shape::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        width: 70%;
-        background: #fbd3ca; /* Light peach shade similar to your image */
-        clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
-        z-index: 1;
-      }
-      .faq-content {
-        max-height: 0;
         overflow: hidden;
-        transition: max-height 0.4s ease;
-      }
-      .faq-active .faq-content {
-        max-height: 400px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); /* Darker shadow */
+        cursor: pointer;
+        transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+          box-shadow 0.4s ease;
+        display: block;
+        /* Enable 3D transforms for children */
+        transform-style: preserve-3d;
       }
 
-      /* Gallery tweaks */
+      .gallery-item:hover {
+        /* Subtle 3D tilt and lift */
+        transform: translateY(-8px) rotateX(1deg) scale(1.01);
+        box-shadow: 0 15px 40px rgba(249, 76, 44, 0.7); /* Stronger hover glow */
+      }
+
       .gallery-item img {
         width: 100%;
-        height: 220px;
+        height: auto;
         object-fit: cover;
         display: block;
-        border-radius: 8px;
+        transition: transform 0.6s ease-out;
       }
 
-      /* filter button active state */
-      .filter-btn.active {
-        outline: 3px solid rgba(249, 76, 44, 0.18);
-        transform: translateY(-2px);
+      .gallery-item:hover img {
+        transform: scale(1.08); /* Slightly faster zoom */
       }
 
-      /* Make gallery anchors not display decoration */
-      #lightgallery a {
-        text-decoration: none;
+      /* --- ENHANCED OVERLAY DESIGN --- */
+      .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.95),
+          /* Darker background */ rgba(0, 0, 0, 0)
+        );
+        color: white;
+        padding: 20px;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in; /* Quick reveal */
+        text-align: left;
       }
 
-      /* responsive tweaks for small screens */
-      @media (max-width: 768px) {
-        .gallery-item img {
-          height: 160px;
+      .gallery-item:hover .gallery-overlay {
+        transform: translateY(0);
+      }
+
+      .gallery-title {
+        font-weight: 900; /* Bolder title */
+        font-size: 1.4rem; /* Larger title */
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+
+      .gallery-description {
+        font-size: 0.95rem;
+        opacity: 0.9;
+        margin-top: 5px;
+        /* Highlight description with accent color */
+        border-left: 3px solid #f94c2c;
+        padding-left: 10px;
+      }
+
+      /* responsive tweaks for column layout */
+      @media (max-width: 1024px) {
+        #lightgallery {
+          column-count: 2;
         }
-        .w-[70%] {
-          width: 92% !important;
+      }
+      @media (max-width: 768px) {
+        #lightgallery {
+          column-count: 1;
         }
       }
     </style>
   </head>
   <body>
-    <!--header and banner started here -->
     <div class="w-full relative">
       <div class="w-full h-[130px] relative flex justify-center bg-[#033257]">
         <div class="w-[80%] flex justify-end">
           <div class="flex gap-5 items-center">
-            <a class="flex gap-2 radio text-white">
+            <a
+              class="flex gap-2 radio text-white hover:text-[#f94c2c] transition duration-300"
+            >
               <img src="assets/images/phone.png" class="h-5 w-5" />
               012 03456 7890
             </a>
-            <a class="flex gap-2 radio text-white">
+            <a
+              class="flex gap-2 radio text-white hover:text-[#f94c2c] transition duration-300"
+            >
               <img src="assets/images/email.png" class="h-5 w-5" />
               loremgmail@gmail.com
             </a>
 
-            <!-- Facebook -->
             <div
-              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center"
+              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center hover:bg-[#f94c2c] transition duration-300 cursor-pointer"
             >
               <i class="fa-brands fa-facebook-f text-white text-xl"></i>
             </div>
-
-            <!-- Instagram -->
             <div
-              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center"
+              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center hover:bg-[#f94c2c] transition duration-300 cursor-pointer"
             >
               <i class="fa-brands fa-instagram text-white text-xl"></i>
             </div>
-
-            <!-- YouTube -->
             <div
-              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center"
+              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center hover:bg-[#f94c2c] transition duration-300 cursor-pointer"
             >
               <i class="fa-brands fa-youtube text-white text-xl"></i>
             </div>
-
-            <!-- LinkedIn -->
             <div
-              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center"
+              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center hover:bg-[#f94c2c] transition duration-300 cursor-pointer"
             >
               <i class="fa-brands fa-linkedin-in text-white text-xl"></i>
             </div>
@@ -140,10 +227,12 @@
           </div>
         </div>
       </div>
-      <!--header section -->
-      <div class="w-full flex z-[12] justify-center absolute top-[110px]">
+
+      <div
+        class="w-full flex z-[12] justify-center absolute top-[110px] nav-container"
+      >
         <div
-          class="w-[84%] flex items-center gap-5 bg-white h-[60px] rounded-tl-[50px] rounded-bl-[50px] rounded-br-[50px] rounded-tr-[50px]"
+          class="w-[84%] flex items-center gap-5 bg-white h-[60px] rounded-tl-[50px] rounded-bl-[50px] rounded-br-[50px] rounded-tr-[50px] shadow-2xl floating-nav"
         >
           <div
             class="h-[140px] w-[140px] rounded-full bg-white mt-[-10px] ml-[50px]"
@@ -151,16 +240,40 @@
             <img src="assets/images/logo.png" class="h-[100px]" />
           </div>
           <ul class="flex gap-8 justify-end ml-[30px] redhat font-bold w-[60%]">
-            <a href="index.html">HOME</a>
-            <a href="about.html">ABOUT</a>
-            <a href="service.html">OUR SERVICES</a>
-            <a href="gallery.html">OUR GALLERY</a>
-            <a href="contact.html">CONTACT US</a>
-            <a href="blog.html">BLOG</a>
+            <a
+              href="index.html"
+              class="hover:text-[#F94C2C] transition duration-150"
+              >HOME</a
+            >
+            <a
+              href="about.html"
+              class="hover:text-[#F94C2C] transition duration-150"
+              >ABOUT</a
+            >
+            <a
+              href="service.html"
+              class="hover:text-[#F94C2C] transition duration-150"
+              >OUR SERVICES</a
+            >
+            <a
+              href="gallery.html"
+              class="hover:text-[#F94C2C] transition duration-150"
+              >OUR GALLERY</a
+            >
+            <a
+              href="contact.html"
+              class="hover:text-[#F94C2C] transition duration-150"
+              >CONTACT US</a
+            >
+            <a
+              href="blog.html"
+              class="hover:text-[#F94C2C] transition duration-150"
+              >BLOG</a
+            >
           </ul>
           <div class="flex justify-end h-full w-[30%]">
             <div
-              class="w-[250px] radio flex gap-2 text-2xl text-white justify-center items-center rounded-tr-[50px] h-full rounded-br-[50px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A]"
+              class="w-[250px] radio flex gap-2 text-2xl text-white justify-center items-center rounded-tr-[50px] h-full rounded-br-[50px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A] hover:from-[#932D1A] hover:to-[#F94C2C] transition duration-300 cursor-pointer"
             >
               <img src="assets/images/CALLICON.png" class="h-10" />
               CALL NOW
@@ -168,7 +281,6 @@
           </div>
         </div>
       </div>
-      <!--banner-->
 
       <div
         class="bg-cover relative bg-center bg-[url('assets/images/bannerimage.jpg')] w-full h-[50vh]"
@@ -187,45 +299,42 @@
         </div>
       </div>
     </div>
-    <!--header and banner is finished here-->
 
-    <!-- FILTER BUTTONS (added data-filter) -->
     <div class="w-full flex justify-center py-10">
-      <div class="w-[80%] justify-center flex gap-4 flex-wrap">
-        <!-- I kept the same button styles but added data-filter attributes -->
+      <div class="w-[90%] max-w-7xl justify-center flex gap-4 flex-wrap">
         <button
-          class="filter-btn px-6 py-2 text-white font-bold bg-gradient-to-r from-[#033257] to-[#076EBD]"
+          class="filter-btn px-6 py-2 rounded-full text-white font-bold"
           data-filter="all"
         >
-          All
+          All Projects
         </button>
 
         <button
-          class="filter-btn px-6 py-2 text-white font-bold bg-gradient-to-r from-[#033257] to-[#076EBD]"
+          class="filter-btn px-6 py-2 rounded-full text-white font-bold"
           data-filter="plumbing"
         >
           Plumbing
         </button>
         <button
-          class="filter-btn px-6 py-2 text-white font-bold bg-gradient-to-r from-[#033257] to-[#076EBD]"
+          class="filter-btn px-6 py-2 rounded-full text-white font-bold"
           data-filter="boiler-install"
         >
           Boiler Installation
         </button>
         <button
-          class="filter-btn px-6 py-2 text-white font-bold bg-gradient-to-r from-[#033257] to-[#076EBD]"
+          class="filter-btn px-6 py-2 rounded-full text-white font-bold"
           data-filter="boiler-repair"
         >
           Boiler Repair
         </button>
         <button
-          class="filter-btn px-6 py-2 text-white font-bold bg-gradient-to-r from-[#033257] to-[#076EBD]"
+          class="filter-btn px-6 py-2 rounded-full text-white font-bold"
           data-filter="gas-repair"
         >
           Gas Repair
         </button>
         <button
-          class="filter-btn px-6 py-2 text-white font-bold bg-gradient-to-r from-[#033257] to-[#076EBD]"
+          class="filter-btn px-6 py-2 rounded-full text-white font-bold"
           data-filter="gas-install"
         >
           Gas Installation
@@ -233,83 +342,126 @@
       </div>
     </div>
 
-    <!-- GALLERY: anchors are lightgallery items. Keep markup similar to yours -->
-    <div class="w-full flex justify-center py-10">
-      <div
-        class="w-[100px] max-h-[400px] mt-[30px] border-t-[2px] border-b-[2px] border-l-[2px] border-[#F74B2C]"
-      ></div>
-      <div
-        class="w-[70px] max-h-[300px] mt-[70px] border-t-[2px] border-b-[2px] border-l-[2px] border-[#F74B2C]"
-      ></div>
-
-      <!-- LightGallery container (id=lightgallery) -->
-      <div
-        class="flex flex-wrap justify-center w-[70%] gap-10"
-        id="lightgallery"
-      >
-        <!-- each anchor must link to the large image (href) and have a data-category -->
-        <!-- KEEP your original images and add data-category accordingly -->
+    <div class="w-full flex justify-center py-10 px-4 md:px-0">
+      <div class="w-[90%] max-w-7xl" id="lightgallery">
         <a
-          href="assets/images/aboutusimage.jpg"
-          class="gallery-item w-[30%] visible"
+          href="assets/images/galleryimage1.webp"
+          class="gallery-item visible"
           data-category="plumbing"
-          data-sub-html="<h4>Plumbing work</h4><p>Some description</p>"
+          data-sub-html="<h4>Plumbing Work</h4><p>Emergency pipe repair in a residential home.</p>"
         >
-          <img src="assets/images/aboutusimage.jpg" alt="plumbing" />
+          <img src="assets/images/galleryimage1.webp" alt="plumbing" />
+          <div class="gallery-overlay">
+            <div class="gallery-title">Plumbing Work</div>
+            <div class="gallery-description">Emergency pipe repair.</div>
+          </div>
         </a>
 
         <a
-          href="assets/images/aboutusimage.jpg"
-          class="gallery-item w-[30%] visible"
+          href="assets/images/galleryimage2.avif"
+          class="gallery-item visible"
           data-category="boiler-install"
-          data-sub-html="<h4>Boiler Installation</h4><p>Some description</p>"
+          data-sub-html="<h4>New Boiler Installation</h4><p>Completed installation of a high-efficiency combi boiler.</p>"
         >
-          <img src="assets/images/aboutusimage.jpg" alt="boiler-install" />
+          <img src="assets/images/galleryimage2.avif" alt="boiler-install" />
+          <div class="gallery-overlay">
+            <div class="gallery-title">Boiler Installation</div>
+            <div class="gallery-description">High-efficiency combi unit.</div>
+          </div>
         </a>
 
         <a
-          href="assets/images/aboutusimage.jpg"
-          class="gallery-item w-[30%] visible"
-          data-category="boiler-repair"
-          data-sub-html="<h4>Boiler Repair</h4><p>Some description</p>"
-        >
-          <img src="assets/images/aboutusimage.jpg" alt="boiler-repair" />
-        </a>
-
-        <a
-          href="assets/images/aboutusimage.jpg"
-          class="gallery-item w-[30%] visible"
+          href="assets/images/galleryimage3.avif"
+          class="gallery-item visible"
           data-category="gas-repair"
-          data-sub-html="<h4>Gas Repair</h4><p>Some description</p>"
+          data-sub-html="<h4>Gas Leak Repair</h4><p>Professional repair and safety check for a residential gas line.</p>"
         >
-          <img src="assets/images/aboutusimage.jpg" alt="gas-repair" />
+          <img src="assets/images/galleryimage3.avif" alt="gas-repair" />
+          <div class="gallery-overlay">
+            <div class="gallery-title">Gas Leak Repair</div>
+            <div class="gallery-description">Residential safety check.</div>
+          </div>
         </a>
 
         <a
-          href="assets/images/aboutusimage.jpg"
-          class="gallery-item w-[30%] visible"
+          href="assets/images/galleryimage4.avif"
+          class="gallery-item visible"
+          data-category="boiler-repair"
+          data-sub-html="<h4>Boiler Maintenance</h4><p>Annual maintenance and service of a commercial boiler system.</p>"
+        >
+          <img src="assets/images/galleryimage4.avif" alt="boiler-repair" />
+          <div class="gallery-overlay">
+            <div class="gallery-title">Boiler Maintenance</div>
+            <div class="gallery-description">Commercial system servicing.</div>
+          </div>
+        </a>
+
+        <a
+          href="assets/images/gasimagge5.avif"
+          class="gallery-item visible"
           data-category="gas-install"
-          data-sub-html="<h4>Gas Installation</h4><p>Some description</p>"
+          data-sub-html="<h4>New Gas Appliance Setup</h4><p>Installation of a new gas cooker and certification.</p>"
         >
-          <img src="assets/images/aboutusimage.jpg" alt="gas-install" />
+          <img src="assets/images/gasimagge5.avif" alt="gas-install" />
+          <div class="gallery-overlay">
+            <div class="gallery-title">Gas Appliance Setup</div>
+            <div class="gallery-description">New cooker installation.</div>
+          </div>
         </a>
 
         <a
-          href="assets/images/aboutusimage.jpg"
-          class="gallery-item w-[30%] visible"
+          href="assets/images/gasimage6.jpg"
+          class="gallery-item visible"
           data-category="plumbing"
-          data-sub-html="<h4>Plumbing 2</h4><p>Some description</p>"
+          data-sub-html="<h4>Bathroom Plumbing</h4><p>Completed installation of new sink and shower mixers.</p>"
         >
-          <img src="assets/images/aboutusimage.jpg" alt="plumbing-2" />
+          <img src="assets/images/gasimage6.jpg" alt="plumbing" />
+          <div class="gallery-overlay">
+            <div class="gallery-title">Bathroom Plumbing</div>
+            <div class="gallery-description">New sink and shower mixers.</div>
+          </div>
+        </a>
+
+        <a
+          href="assets/images/gasimage7.avif"
+          class="gallery-item visible"
+          data-category="boiler-repair"
+          data-sub-html="<h4>System Diagnostics</h4><p>Advanced fault finding on a central heating system.</p>"
+        >
+          <img src="assets/images/gasimage7.avif" alt="boiler-repair-2" />
+          <div class="gallery-overlay">
+            <div class="gallery-title">System Diagnostics</div>
+            <div class="gallery-description">Advanced fault finding.</div>
+          </div>
+        </a>
+
+        <a
+          href="assets/images/gasimage8.avif"
+          class="gallery-item visible"
+          data-category="plumbing"
+          data-sub-html="<h4>Commercial Washroom Refit</h4><p>Completed plumbing work for a new commercial washroom.</p>"
+        >
+          <img src="assets/images/gasimage8.avif" alt="plumbing-3" />
+          <div class="gallery-overlay">
+            <div class="gallery-title">Washroom Refit</div>
+            <div class="gallery-description">
+              Commercial plumbing completed.
+            </div>
+          </div>
+        </a>
+        <a
+          href="assets/images/gasimagge5.avif"
+          class="gallery-item visible"
+          data-category="gas-install"
+          data-sub-html="<h4>New Gas Appliance Setup</h4><p>Installation of a new gas cooker and certification.</p>"
+        >
+          <img src="assets/images/gasimagge5.avif" alt="gas-install" />
+          <div class="gallery-overlay">
+            <div class="gallery-title">Gas Appliance Setup</div>
+            <div class="gallery-description">New cooker installation.</div>
+          </div>
         </a>
       </div>
-
-      <div
-        class="w-[70px] max-h-[300px] mt-[70px] border-t-[2px] border-b-[2px] border-r-[2px] border-[#F74B2C]"
-      ></div>
-      <div
-        class="w-[100px] max-h-[400px] mt-[30px] border-t-[2px] border-b-[2px] border-r-[2px] border-[#F74B2C]"
-      ></div>
     </div>
 
     <footer class="footer-background bg-[#063559] pt-20">
@@ -329,31 +481,31 @@
             </p>
             <div class="flex space-x-3">
               <div
-                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border-[#f74b2c]"
+                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border-[#f74b2c] hover:bg-[#f74b2c] transition duration-300 cursor-pointer"
               >
                 <a href="#" class="social-icon" aria-label="Facebook"
                   ><i class="fab fa-facebook-f"></i
                 ></a>
               </div>
               <div
-                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border-[#f74b2c]"
+                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border-[#f74b2c] hover:bg-[#f74c2c] transition duration-300 cursor-pointer"
               >
-                <a href="#" class="social-icon" aria-label="Facebook"
-                  ><i class="fab fa-facebook-f"></i
+                <a href="#" class="social-icon" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
                 ></a>
               </div>
               <div
-                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border-[#f74b2c]"
+                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border- [#f74b2c] hover:bg-[#f74c2c] transition duration-300 cursor-pointer"
               >
-                <a href="#" class="social-icon" aria-label="Facebook"
-                  ><i class="fab fa-facebook-f"></i
+                <a href="#" class="social-icon" aria-label="Youtube"
+                  ><i class="fab fa-youtube"></i
                 ></a>
               </div>
               <div
-                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border-[#f74b2c]"
+                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border-[#f74b2c] hover:bg-[#f74c2c] transition duration-300 cursor-pointer"
               >
-                <a href="#" class="social-icon" aria-label="Facebook"
-                  ><i class="fab fa-facebook-f"></i
+                <a href="#" class="social-icon" aria-label="LinkedIn"
+                  ><i class="fab fa-linkedin-in"></i
                 ></a>
               </div>
             </div>
@@ -456,15 +608,12 @@
       </div>
     </footer>
 
-    <!-- Scripts: jQuery first, then LightGallery + plugins, then our code -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-    <!-- LightGallery bundle includes core + plugins (thumbnail, zoom etc) -->
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/share/lg-share.umd.min.js"></script>
 
-    <!-- Optional plugins you had (owl, bootstrap) - kept as you included them -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -481,7 +630,7 @@
             try {
               lgInstance.destroy();
             } catch (e) {
-              // ignore
+              // ignore destroy errors
             }
             lgInstance = null;
           }
@@ -491,10 +640,10 @@
           lgInstance = lightGallery(galleryEl, {
             selector: ".gallery-item.visible",
             thumbnail: true,
-            plugins: [lgThumbnail, lgZoom],
+            plugins: [lgThumbnail, lgZoom, lgShare],
             zoom: true,
             download: true,
-            licenseKey: "", // optional if you have one
+            licenseKey: "",
             speed: 500,
           });
         }
@@ -504,10 +653,10 @@
           $(this).addClass("visible");
         });
 
-        // initialize LG first time
+        // initialize LG first time (for the "All Projects" view)
         initLightGallery();
 
-        // filtering
+        // Filtering logic
         $(".filter-btn").on("click", function () {
           const filter = $(this).data("filter");
 
@@ -527,6 +676,7 @@
               if (cat === filter) {
                 $(this).addClass("visible").show();
               } else {
+                // Ensure hidden elements are removed from LG selector
                 $(this).removeClass("visible").hide();
               }
             });
@@ -539,15 +689,11 @@
           }, 60);
         });
 
-        // Optional: allow clicking images to open (already handled by LightGallery)
         // Optional: keyboard accessibility - focusable anchors
         $(".gallery-item").attr("tabindex", "0");
-
-        // If you later add images dynamically, call initLightGallery() again after adding them.
       });
     </script>
 
-    <!-- FAQ JS (kept exactly as your original) -->
     <script>
       const faqItems = document.querySelectorAll(".faq-item");
 

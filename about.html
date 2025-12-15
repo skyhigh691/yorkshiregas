@@ -6,13 +6,16 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <meta name="robots" content="noindex" />
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=popin+Canada:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=popin:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
@@ -26,17 +29,12 @@
     />
 
     <style>
-      .radio {
-        font-family: "Radio Canada", sans-serif;
-      }
-      .redhat {
-        font-family: "Red Hat Text", sans-serif;
-      }
-      .raleway {
-        font-family: "Raleway", sans-serif;
-      }
       .shape {
         position: relative;
+      }
+
+      .popin {
+        font-family: "Poppins", sans-serif;
       }
 
       .shape::before {
@@ -64,11 +62,11 @@
       <div class="w-full h-[130px] relative flex justify-center bg-[#033257]">
         <div class="w-[80%] flex justify-end">
           <div class="flex gap-5 items-center">
-            <a class="flex gap-2 radio text-white">
+            <a class="flex gap-2 popin text-white">
               <img src="assets/images/phone.png" class="h-5 w-5" />
               012 03456 7890
             </a>
-            <a class="flex gap-2 radio text-white">
+            <a class="flex gap-2 popin text-white">
               <img src="assets/images/email.png" class="h-5 w-5" />
               loremgmail@gmail.com
             </a>
@@ -115,7 +113,7 @@
           >
             <img src="assets/images/logo.png" class="h-[100px]" />
           </div>
-          <ul class="flex gap-8 justify-end ml-[30px] redhat font-bold w-[60%]">
+          <ul class="flex gap-8 justify-end ml-[30px] popin font-bold w-[60%]">
             <a href="index.html">HOME</a>
             <a href="about.html">ABOUT</a>
             <a href="service.html">OUR SERVICES</a>
@@ -125,7 +123,7 @@
           </ul>
           <div class="flex justify-end h-full w-[30%]">
             <div
-              class="w-[250px] radio flex gap-2 text-2xl text-white justify-center items-center rounded-tr-[50px] h-full rounded-br-[50px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A]"
+              class="w-[250px] popin flex gap-2 text-2xl text-white justify-center items-center rounded-tr-[50px] h-full rounded-br-[50px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A]"
             >
               <img src="assets/images/CALLICON.png" class="h-10" />
               CALL NOW
@@ -146,7 +144,7 @@
           class="w-[65%] flex flex-col justify-center items-center bg-[#094C80AD] relative z-[10] h-full"
           style="clip-path: polygon(0 0, 100% 0%, 81% 100%, 0% 100%)"
         >
-          <h1 class="text-6xl radio ml-[-120px] text-white">
+          <h1 class="text-6xl popin ml-[-120px] text-white">
             Know About Us <br />
           </h1>
         </div>
@@ -169,7 +167,7 @@
           <div class="flex-1 h-full flex flex-col justify-between">
             <!-- FULL TEXT CONTENT -->
             <div>
-              <h2 class="text-5xl radio text-gray-900">About us</h2>
+              <h2 class="text-4xl popin font-bold text-gray-900">About us</h2>
 
               <div
                 class="w-24 h-[3px] mt-2 mb-6"
@@ -177,10 +175,10 @@
               ></div>
 
               <!-- Mission Section -->
-              <h3 class="text-xl radio font-semibold text-gray-900 mb-2">
+              <h3 class="text-xl popin font-bold text-gray-900 mb-2">
                 Our Mission
               </h3>
-              <p class="text-gray-600 raleway text-[17px] leading-relaxed mb-6">
+              <p class="text-gray-600 popin text-[17px] leading-relaxed mb-6">
                 At Fusion Plumbing and Electrical, our mission is to provide
                 reliable, affordable, and high-quality Plumbing and Electrical
                 services to residents and businesses in London. We are committed
@@ -190,10 +188,10 @@
               </p>
 
               <!-- Story Section -->
-              <h3 class="text-xl radio font-semibold text-gray-900 mb-2">
+              <h3 class="text-xl popin font-bold text-gray-900 mb-2">
                 Our Story
               </h3>
-              <p class="text-gray-600 raleway text-[17px] leading-relaxed mb-6">
+              <p class="text-gray-600 popin text-[17px] leading-relaxed mb-6">
                 Founded on the principles of excellence, integrity, and customer
                 satisfaction, Fusion Plumbing and Electrical has become a
                 trusted name in the Plumbing and Electrical industry. With years
@@ -205,9 +203,9 @@
                 process.
               </p>
 
-              <p class="text-gray-600 text-[17px] raleway leading-relaxed">
+              <p class="text-gray-600 text-[17px] popin leading-relaxed">
                 Discover how
-                <span class="font-semibold text-gray-900">
+                <span class="font-bold text-gray-900">
                   "Fusion Plumbing and Electrical"
                 </span>
                 can assist you with your Plumbing and Electrical needs.
@@ -222,7 +220,7 @@
 
             <!-- BUTTON -->
             <button
-              class="w-[40%] px-6 redhat py-3 text-white font-semibold rounded-xl shadow-lg mt-8"
+              class="w-[40%] px-6 popin py-3 text-white font-bold rounded-xl shadow-lg mt-8"
               style="background: linear-gradient(135deg, #f24a2b, #9e311c)"
             >
               Get your free quote now
@@ -247,7 +245,7 @@
 
           <div class="flex justify-between items-center relative z-10">
             <h2
-              class="text-3xl text-black radio transition-colors duration-300 group-hover:text-[#9E311C]"
+              class="text-2xl text-black popin font-bold transition-colors duration-300 group-hover:text-[#9E311C]"
             >
               Quality
             </h2>
@@ -261,7 +259,7 @@
           </div>
 
           <p
-            class="mt-4 text-gray-700 leading-relaxed raleway transition-colors duration-300 group-hover:text-gray-900"
+            class="mt-4 text-gray-700 leading-relaxed popin transition-colors duration-300 group-hover:text-gray-900"
           >
             We deliver top-notch workmanship on every project, using the latest
             tools and techniques to ensure lasting results.
@@ -279,7 +277,7 @@
 
           <div class="flex justify-between items-center relative z-10">
             <h2
-              class="text-3xl text-black radio transition-colors duration-300 group-hover:text-[#9E311C]"
+              class="text-2xl text-black font-bold popin transition-colors duration-300 group-hover:text-[#9E311C]"
             >
               Transparency
             </h2>
@@ -293,7 +291,7 @@
           </div>
 
           <p
-            class="mt-4 text-gray-700 raleway leading-relaxed transition-colors duration-300 group-hover:text-gray-900"
+            class="mt-4 text-gray-700 popin leading-relaxed transition-colors duration-300 group-hover:text-gray-900"
           >
             Our competitive rates come with no hidden fees. You'll receive
             upfront costs before any work begins, giving you peace of mind.
@@ -311,7 +309,7 @@
 
           <div class="flex justify-between items-center relative z-10">
             <h2
-              class="text-3xl text-black radio transition-colors duration-300 group-hover:text-[#9E311C]"
+              class="text-2xl text-black font-bold popin transition-colors duration-300 group-hover:text-[#9E311C]"
             >
               Satisfaction
             </h2>
@@ -325,7 +323,7 @@
           </div>
 
           <p
-            class="mt-4 text-gray-700 raleway leading-relaxed transition-colors duration-300 group-hover:text-gray-900"
+            class="mt-4 text-gray-700 popin leading-relaxed transition-colors duration-300 group-hover:text-gray-900"
           >
             Your satisfaction is our top priority. We strive to exceed
             expectations by providing exceptional customer service and clear
@@ -339,7 +337,7 @@
       class="relative w-full py-20 text-white bg-gradient-to-r from-[#033257] to-[#076EBD]"
     >
       <!-- TITLE -->
-      <h2 class="text-5xl radio text-center tracking-wide mb-10">
+      <h2 class="text-4xl font-bold popin text-center tracking-wide mb-10">
         WHY CHOOSE US?
       </h2>
 
@@ -350,10 +348,10 @@
         <!-- LEFT LIST -->
         <div class="space-y-10">
           <div>
-            <h3 class="flex items-center gap-3 text-2xl radio font-semibold">
+            <h3 class="flex items-center gap-3 text-2xl popin font-bold">
               <img src="assets/images/experience.png" class="w-16" /> Experience
             </h3>
-            <p class="text-sm opacity-90 mt-2 raleway">
+            <p class="text-sm opacity-90 mt-2 popin">
               With decades of field experience, we provide reliable plumbing and
               heating expertise.
             </p>
@@ -361,22 +359,22 @@
 
           <div>
             <h3
-              class="flex items-center gap-3 font-redhat text-2xl radio font-semibold"
+              class="flex items-center gap-3 font-popin font-bold text-2xl popin"
             >
               <img src="assets/images/awaidwinnig.png" class="w-16" />
               Award-Winning
             </h3>
-            <p class="text-sm opacity-90 mt-2 raleway">
+            <p class="text-sm opacity-90 mt-2 popin">
               We have been recognised for our quality installations and trusted
               service excellence.
             </p>
           </div>
 
           <div>
-            <h3 class="flex items-center gap-3 text-2xl radio font-semibold">
+            <h3 class="flex items-center gap-3 text-2xl popin font-bold">
               <img src="assets/images/quality.png" class="w-16" /> Quality
             </h3>
-            <p class="text-sm opacity-90 mt-2 raleway">
+            <p class="text-sm opacity-90 mt-2 popin">
               We maintain high service standards through skilled staff and
               top-grade materials.
             </p>
@@ -394,31 +392,31 @@
         <!-- RIGHT LIST -->
         <div class="space-y-10">
           <div>
-            <h3 class="flex items-center gap-3 text-2xl radio font-semibold">
+            <h3 class="flex items-center gap-3 text-2xl popin font-bold">
               <img src="assets/images/choose1.png" class="w-16" /> Transparency
             </h3>
-            <p class="text-sm raleway opacity-90 mt-2">
+            <p class="text-sm popin opacity-90 mt-2">
               Clear pricing, no hidden fees — complete honesty in every step of
               the process.
             </p>
           </div>
 
           <div>
-            <h3 class="flex items-center gap-3 text-2xl radio font-semibold">
+            <h3 class="flex items-center gap-3 text-2xl popin font-bold">
               <img src="assets/images/freeestimate.png" class="w-16" /> Free
               Estimates
             </h3>
-            <p class="text-sm opacity-90 mt-2 raleway">
+            <p class="text-sm opacity-90 mt-2 popin">
               We provide free quotations with zero obligations for our clients.
             </p>
           </div>
 
           <div>
-            <h3 class="flex items-center gap-3 text-2xl radio font-semibold">
+            <h3 class="flex items-center gap-3 text-2xl popin font-bold">
               <img src="assets/images/customer.png" class="w-16" /> Customer
               Satisfaction
             </h3>
-            <p class="text-sm opacity-90 mt-2 raleway font-redhat">
+            <p class="text-sm opacity-90 mt-2 popin font-popin">
               Hundreds of happy customers have trusted us with their homes.
             </p>
           </div>
@@ -426,7 +424,7 @@
       </div>
 
       <!-- BUTTONS -->
-      <div class="flex justify-center redhat gap-5 mt-12 flex-wrap">
+      <div class="flex justify-center popin gap-5 mt-12 flex-wrap">
         <button
           class="bg-gradient-to-r from-[#F94C2C] to-[#932D1A] px-6 rounded-[10px] py-2 font-bold hover:bg-red-700"
         >
@@ -464,7 +462,7 @@
               <img src="assets/images/call.png" class="h-16" />
             </div>
           </div>
-          <p class="text-[#F94C2C] raleway text-[22px] pt-2 font-bold">
+          <p class="text-[#F94C2C] popin text-[22px] pt-2 font-bold">
             10 Year + Exp
           </p>
         </div>
@@ -478,7 +476,7 @@
               <img src="assets/images/call.png" class="h-16" />
             </div>
           </div>
-          <p class="text-[#F94C2C] raleway text-[22px] pt-2 font-bold">
+          <p class="text-[#F94C2C] popin text-[22px] pt-2 font-bold">
             500+ Projects
           </p>
         </div>
@@ -492,7 +490,7 @@
               <img src="assets/images/call.png" class="h-16" />
             </div>
           </div>
-          <p class="text-[#F94C2C] raleway text-[22px] pt-2 font-bold">
+          <p class="text-[#F94C2C] popin text-[22px] pt-2 font-bold">
             300 + Clients
           </p>
         </div>
@@ -507,7 +505,7 @@
             </div>
           </div>
           <p
-            class="text-[#F94C2C] text-center raleway text-[22px] pt-2 font-bold"
+            class="text-[#F94C2C] text-center popin text-[22px] pt-2 font-bold"
           >
             100% Happy Client
           </p>
@@ -520,8 +518,10 @@
     <!---city-->
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 text-center">
-        <h2 class="text-5xl radio text-gray-900">London boroughs we cover</h2>
-        <p class="text-gray-600 text-[18px] mt-2 raleway">
+        <h2 class="text-4xl font-bold popin text-gray-900">
+          London boroughs we cover
+        </h2>
+        <p class="text-gray-600 text-[18px] mt-2 popin">
           Looking for local plumbers and electricians? Contact our 24/7
           emergency team today!
         </p>
@@ -538,19 +538,19 @@
             />
 
             <div class="p-6 text-left">
-              <h3 class="text-3xl radio">Brent</h3>
+              <h3 class="text-2xl font-semibold popin">Brent</h3>
               <div
                 class="w-12 h-[3px] mt-1 mb-3"
                 style="background: #f24a2b"
               ></div>
 
-              <p class="text-gray-600 text-[16px] raleway leading-relaxed">
+              <p class="text-gray-600 text-[16px] popin leading-relaxed">
                 Expert plumbing and electrical services in Brent including 24/7
                 repairs and installations.
               </p>
 
               <button
-                class="mt-5 w-full redhat py-3 rounded-md text-white font-semibold"
+                class="mt-5 w-full popin py-3 rounded-md text-white font-bold"
                 style="background: linear-gradient(135deg, #f24a2b, #9e311c)"
               >
                 Reach Out To Get Service
@@ -568,19 +568,19 @@
             />
 
             <div class="p-6 text-left">
-              <h3 class="text-3xl radio">Westminster</h3>
+              <h3 class="text-2xl font-semibold popin">Westminster</h3>
               <div
                 class="w-12 h-[3px] mt-1 mb-3"
                 style="background: #f24a2b"
               ></div>
 
-              <p class="text-gray-600 text-[16px] raleway leading-relaxed">
+              <p class="text-gray-600 text-[16px] popin leading-relaxed">
                 Trusted plumbing and electrical services across Westminster with
                 fast emergency .
               </p>
 
               <button
-                class="mt-5 w-full redhat py-3 rounded-md text-white font-semibold"
+                class="mt-5 w-full popin py-3 rounded-md text-white font-bold"
                 style="background: linear-gradient(135deg, #f24a2b, #9e311c)"
               >
                 Reach Out To Get Service
@@ -598,19 +598,19 @@
             />
 
             <div class="p-6 text-left">
-              <h3 class="text-3xl radio">Camden</h3>
+              <h3 class="text-2xl font-semibold popin">Camden</h3>
               <div
                 class="w-12 h-[3px] mt-1 mb-3"
                 style="background: #f24a2b"
               ></div>
 
-              <p class="text-gray-600 text-[16px] raleway leading-relaxed">
+              <p class="text-gray-600 text-[16px] popin leading-relaxed">
                 Reliable 24/7 plumbing and electrical services in Camden
                 including leak detection.
               </p>
 
               <button
-                class="mt-5 w-full redhat py-3 rounded-md text-white font-semibold"
+                class="mt-5 w-full popin py-3 rounded-md text-white font-bold"
                 style="background: linear-gradient(135deg, #f24a2b, #9e311c)"
               >
                 Reach Out To Get Service
@@ -628,19 +628,21 @@
             />
 
             <div class="p-6 text-left">
-              <h3 class="text-3xl radio">Kensington and Chelsea</h3>
+              <h3 class="text-2xl font-semibold popin">
+                Kensington and Chelsea
+              </h3>
               <div
                 class="w-12 h-[3px] mt-1 mb-3"
                 style="background: #f24a2b"
               ></div>
 
-              <p class="text-gray-600 text-[16px] raleway leading-relaxed">
+              <p class="text-gray-600 text-[16px] popin leading-relaxed">
                 Luxury plumbing and electrical services in Kensington and
                 Chelsea.
               </p>
 
               <button
-                class="mt-5 w-full redhat py-3 rounded-md text-white font-semibold"
+                class="mt-5 w-full popin py-3 rounded-md text-white font-bold"
                 style="background: linear-gradient(135deg, #f24a2b, #9e311c)"
               >
                 Reach Out To Get Service
@@ -658,18 +660,18 @@
             />
 
             <div class="p-6 text-left">
-              <h3 class="text-3xl radio">Hammersmith</h3>
+              <h3 class="text-2xl font-semibold popin">Hammersmith</h3>
               <div
                 class="w-12 h-[3px] mt-1 mb-3"
                 style="background: #f24a2b"
               ></div>
 
-              <p class="text-gray-600 text-[16px] raleway leading-relaxed">
+              <p class="text-gray-600 text-[16px] popin leading-relaxed">
                 Emergency services with expert radiator repairs and rewiring.
               </p>
 
               <button
-                class="mt-5 w-full redhat py-3 rounded-md text-white font-semibold"
+                class="mt-5 w-full popin py-3 rounded-md text-white font-bold"
                 style="background: linear-gradient(135deg, #f24a2b, #9e311c)"
               >
                 Reach Out To Get Service
@@ -687,19 +689,19 @@
             />
 
             <div class="p-6 text-left">
-              <h3 class="text-3xl radio">Ealing</h3>
+              <h3 class="text-2xl font-semibold popin">Ealing</h3>
               <div
                 class="w-12 h-[3px] mt-1 mb-3"
                 style="background: #f24a2b"
               ></div>
 
-              <p class="text-gray-600 text-[16px] raleway leading-relaxed">
+              <p class="text-gray-600 text-[16px] popin leading-relaxed">
                 Professional plumbing and electrical services including drain
                 repairs.
               </p>
 
               <button
-                class="mt-5 w-full redhat py-3 rounded-md text-white font-semibold"
+                class="mt-5 w-full popin py-3 rounded-md text-white font-bold"
                 style="background: linear-gradient(135deg, #f24a2b, #9e311c)"
               >
                 Reach Out To Get Service
@@ -718,13 +720,13 @@
       >
         <!-- LEFT INFO BOX -->
         <div class="space-y-8">
-          <h2 class="text-4xl radio text-[#F94C2C]">CONTACT US</h2>
+          <h2 class="text-4xl font-bold popin text-[#F94C2C]">CONTACT US</h2>
 
           <!-- PHONE -->
           <div class="flex items-start gap-4">
             <img src="assets/images/calli.png" class="w-10" />
             <div>
-              <h3 class="text-lg font-semibold text-gray-700 radio">Phone</h3>
+              <h3 class="text-lg font-bold text-gray-700 popin">Phone</h3>
               <a href="tel:01443804427" class="text-blue-600 underline"
                 >01443 804427</a
               >
@@ -735,10 +737,10 @@
           <div class="flex items-start gap-4">
             <img src="assets/images/gmail.png" class="w-10" />
             <div>
-              <h3 class="text-lg font-semibold text-gray-700 radio">Email</h3>
+              <h3 class="text-lg font-bold text-gray-700 popin">Email</h3>
               <a
                 href="mailto:admin@plumbing-hot.co.uk"
-                class="text-blue-600 underline"
+                class="text-blue-600 popin underline"
                 >admin@plumbing-hot.co.uk</a
               >
             </div>
@@ -748,17 +750,17 @@
           <div class="flex items-start gap-4">
             <img src="assets/images/office.png" class="w-10" />
             <div>
-              <h3 class="text-lg font-semibold text-gray-700 radio">
+              <h3 class="text-lg font-bold popin text-gray-700 popin">
                 Office Hours
               </h3>
-              <p class="text-gray-600 mt-1">
+              <p class="text-gray-600 mt-1 popin">
                 Monday – Friday · <strong>9:00 AM – 5:00 PM</strong><br />
                 24/7 emergency call-outs for Premium & Ultimate customers.
               </p>
             </div>
           </div>
 
-          <p class="text-gray-700">
+          <p class="text-gray-700 popin">
             Click here for
             <a href="#" class="text-blue-600 underline font-medium"
               >Emergency Plumbing</a
@@ -791,7 +793,7 @@
             <div class="flex items-center space-x-2 mb-4">
               <img src="assets/images/footerlogo.png" class="h-[140px]" />
             </div>
-            <p class="text-[16px] text-gray-300 radio mb-6 max-w-xs">
+            <p class="text-[16px] text-gray-300 popin mb-6 max-w-xs">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard.
             </p>
@@ -828,8 +830,8 @@
           </div>
 
           <div class="ml-10">
-            <h4 class="text-[24px] radio font-semibold mb-6">Quick Links</h4>
-            <ul class="space-y-3 redhat text-[20px]">
+            <h4 class="text-[24px] popin font-bold mb-6">Quick Links</h4>
+            <ul class="space-y-3 popin text-[20px]">
               <li
                 class="flex items-start text-gray-300 hover:text-red-500 transition duration-150"
               >
@@ -882,43 +884,43 @@
           </div>
 
           <div>
-            <h4 class="text-[24px] radio font-semibold mb-6">Contact Info</h4>
+            <h4 class="text-[24px] popin font-bold mb-6">Contact Info</h4>
             <div class="space-y-4">
               <div class="flex items-start text-gray-300">
                 <i
                   class="fas fa-map-marker-alt text-red-500 text-lg mt-1 mr-3"
                 ></i>
-                <p class="text-[18px] redhat">
+                <p class="text-[18px] popin">
                   32 Lorem Rd, Lorem BR2 8BA, United Kingdom
                 </p>
               </div>
               <div class="flex items-center text-gray-300">
                 <i class="fas fa-envelope text-red-500 text-lg mr-3"></i>
-                <p class="text-[18px] redhat">Loremtest@gmail.com</p>
+                <p class="text-[18px] popin">Loremtest@gmail.com</p>
               </div>
               <div class="flex items-center text-gray-300">
                 <i class="fas fa-phone-alt text-red-500 text-lg mr-3"></i>
-                <p class="text-[18px] redhat">0123-4567-6065</p>
+                <p class="text-[18px] popin">0123-4567-6065</p>
               </div>
             </div>
           </div>
 
           <div>
-            <h4 class="text-[24px] radio font-semibold mb-6">Working Hours</h4>
+            <h4 class="text-[24px] popin font-bold mb-6">Working Hours</h4>
             <div class="space-y-4">
-              <p class="text-gray-300 redhat text-[18px]">
-                <span class="font-semibold text-white">Monday to Friday:</span>
+              <p class="text-gray-300 popin text-[18px]">
+                <span class="font-bold text-white">Monday to Friday:</span>
                 8am to 8pm
               </p>
-              <p class="text-gray-300 redhat text-[18px]">
-                <span class="font-semibold text-white">Saturday-Sunday:</span>
+              <p class="text-gray-300 popin text-[18px]">
+                <span class="font-bold text-white">Saturday-Sunday:</span>
                 9am to 5pm
               </p>
             </div>
           </div>
         </div>
 
-        <div class="text-center text-[18px] redhat pt-8 text-gray-400">
+        <div class="text-center text-[18px] popin pt-8 text-gray-400">
           &copy; 2025 All Rights Reserved Lorem Ipsum Services
         </div>
       </div>
