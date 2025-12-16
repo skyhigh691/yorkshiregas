@@ -28,17 +28,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       /* --- Base Typography --- */
-      .radio {
-        font-family: "Radio Canada", sans-serif;
-      }
-      .redhat {
-        font-family: "Red Hat Text", sans-serif;
-      }
-      .raleway {
-        font-family: "Raleway", sans-serif;
+      .popin {
+        font-family: "Poppins", sans-serif;
       }
 
       /* --- Navigation Enhancement (Subtle 3D Lift) --- */
@@ -156,7 +154,7 @@
         transform: translateY(0);
       }
 
-      .gallery-title {
+      .gallery-title popin font-bold popin {
         font-weight: 900; /* Bolder title */
         font-size: 1.4rem; /* Larger title */
         text-transform: uppercase;
@@ -191,13 +189,13 @@
         <div class="w-[80%] flex justify-end">
           <div class="flex gap-5 items-center">
             <a
-              class="flex gap-2 radio text-white hover:text-[#f94c2c] transition duration-300"
+              class="flex gap-2 popin text-white hover:text-[#f94c2c] transition duration-300"
             >
               <img src="assets/images/phone.png" class="h-5 w-5" />
               012 03456 7890
             </a>
             <a
-              class="flex gap-2 radio text-white hover:text-[#f94c2c] transition duration-300"
+              class="flex gap-2 popin text-white hover:text-[#f94c2c] transition duration-300"
             >
               <img src="assets/images/email.png" class="h-5 w-5" />
               loremgmail@gmail.com
@@ -239,7 +237,7 @@
           >
             <img src="assets/images/logo.png" class="h-[100px]" />
           </div>
-          <ul class="flex gap-8 justify-end ml-[30px] redhat font-bold w-[60%]">
+          <ul class="flex gap-8 justify-end ml-[30px] popin font-bold w-[60%]">
             <a
               href="index.html"
               class="hover:text-[#F94C2C] transition duration-150"
@@ -273,7 +271,7 @@
           </ul>
           <div class="flex justify-end h-full w-[30%]">
             <div
-              class="w-[250px] radio flex gap-2 text-2xl text-white justify-center items-center rounded-tr-[50px] h-full rounded-br-[50px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A] hover:from-[#932D1A] hover:to-[#F94C2C] transition duration-300 cursor-pointer"
+              class="w-[250px] popin flex gap-2 text-2xl text-white justify-center items-center rounded-tr-[50px] h-full rounded-br-[50px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A] hover:from-[#932D1A] hover:to-[#F94C2C] transition duration-300 cursor-pointer"
             >
               <img src="assets/images/CALLICON.png" class="h-10" />
               CALL NOW
@@ -293,7 +291,7 @@
           class="w-[65%] flex flex-col justify-center items-center bg-[#094C80AD] relative z-[10] h-full"
           style="clip-path: polygon(0 0, 100% 0%, 81% 100%, 0% 100%)"
         >
-          <h1 class="text-6xl radio ml-[-90px] text-white">
+          <h1 class="text-5xl popin font-bold ml-[-90px] text-white">
             View Our Latest Work <br />
           </h1>
         </div>
@@ -303,38 +301,38 @@
     <div class="w-full flex justify-center py-10">
       <div class="w-[90%] max-w-7xl justify-center flex gap-4 flex-wrap">
         <button
-          class="filter-btn px-6 py-2 rounded-full text-white font-bold"
+          class="filter-btn px-6 py-2 rounded-full text-white popin font-bold"
           data-filter="all"
         >
           All Projects
         </button>
 
         <button
-          class="filter-btn px-6 py-2 rounded-full text-white font-bold"
+          class="filter-btn px-6 py-2 rounded-full text-white popin font-bold"
           data-filter="plumbing"
         >
           Plumbing
         </button>
         <button
-          class="filter-btn px-6 py-2 rounded-full text-white font-bold"
+          class="filter-btn px-6 py-2 rounded-full text-white popin font-bold"
           data-filter="boiler-install"
         >
           Boiler Installation
         </button>
         <button
-          class="filter-btn px-6 py-2 rounded-full text-white font-bold"
+          class="filter-btn px-6 py-2 rounded-full text-white popin font-bold"
           data-filter="boiler-repair"
         >
           Boiler Repair
         </button>
         <button
-          class="filter-btn px-6 py-2 rounded-full text-white font-bold"
+          class="filter-btn px-6 py-2 rounded-full text-white popin font-bold"
           data-filter="gas-repair"
         >
           Gas Repair
         </button>
         <button
-          class="filter-btn px-6 py-2 rounded-full text-white font-bold"
+          class="filter-btn px-6 py-2 rounded-full text-white popin font-bold"
           data-filter="gas-install"
         >
           Gas Installation
@@ -352,8 +350,10 @@
         >
           <img src="assets/images/galleryimage1.webp" alt="plumbing" />
           <div class="gallery-overlay">
-            <div class="gallery-title">Plumbing Work</div>
-            <div class="gallery-description">Emergency pipe repair.</div>
+            <div class="gallery-title popin font-bold popin popin">
+              Plumbing Work
+            </div>
+            <div class="gallery-description popin">Emergency pipe repair.</div>
           </div>
         </a>
 
@@ -365,8 +365,12 @@
         >
           <img src="assets/images/galleryimage2.avif" alt="boiler-install" />
           <div class="gallery-overlay">
-            <div class="gallery-title">Boiler Installation</div>
-            <div class="gallery-description">High-efficiency combi unit.</div>
+            <div class="gallery-title popin font-bold popin popin">
+              Boiler Installation
+            </div>
+            <div class="gallery-description popin">
+              High-efficiency combi unit.
+            </div>
           </div>
         </a>
 
@@ -378,8 +382,12 @@
         >
           <img src="assets/images/galleryimage3.avif" alt="gas-repair" />
           <div class="gallery-overlay">
-            <div class="gallery-title">Gas Leak Repair</div>
-            <div class="gallery-description">Residential safety check.</div>
+            <div class="gallery-title popin font-bold popin popin">
+              Gas Leak Repair
+            </div>
+            <div class="gallery-description popin">
+              Residential safety check.
+            </div>
           </div>
         </a>
 
@@ -391,8 +399,12 @@
         >
           <img src="assets/images/galleryimage4.avif" alt="boiler-repair" />
           <div class="gallery-overlay">
-            <div class="gallery-title">Boiler Maintenance</div>
-            <div class="gallery-description">Commercial system servicing.</div>
+            <div class="gallery-title popin font-bold popin">
+              Boiler Maintenance
+            </div>
+            <div class="gallery-description popin">
+              Commercial system servicing.
+            </div>
           </div>
         </a>
 
@@ -404,7 +416,9 @@
         >
           <img src="assets/images/gasimagge5.avif" alt="gas-install" />
           <div class="gallery-overlay">
-            <div class="gallery-title">Gas Appliance Setup</div>
+            <div class="gallery-title popin font-bold popin">
+              Gas Appliance Setup
+            </div>
             <div class="gallery-description">New cooker installation.</div>
           </div>
         </a>
@@ -417,7 +431,9 @@
         >
           <img src="assets/images/gasimage6.jpg" alt="plumbing" />
           <div class="gallery-overlay">
-            <div class="gallery-title">Bathroom Plumbing</div>
+            <div class="gallery-title popin font-bold popin">
+              Bathroom Plumbing
+            </div>
             <div class="gallery-description">New sink and shower mixers.</div>
           </div>
         </a>
@@ -430,7 +446,9 @@
         >
           <img src="assets/images/gasimage7.avif" alt="boiler-repair-2" />
           <div class="gallery-overlay">
-            <div class="gallery-title">System Diagnostics</div>
+            <div class="gallery-title popin font-bold popin">
+              System Diagnostics
+            </div>
             <div class="gallery-description">Advanced fault finding.</div>
           </div>
         </a>
@@ -443,7 +461,9 @@
         >
           <img src="assets/images/gasimage8.avif" alt="plumbing-3" />
           <div class="gallery-overlay">
-            <div class="gallery-title">Washroom Refit</div>
+            <div class="gallery-title popin font-bold popin">
+              Washroom Refit
+            </div>
             <div class="gallery-description">
               Commercial plumbing completed.
             </div>
@@ -457,7 +477,9 @@
         >
           <img src="assets/images/gasimagge5.avif" alt="gas-install" />
           <div class="gallery-overlay">
-            <div class="gallery-title">Gas Appliance Setup</div>
+            <div class="gallery-title popin font-bold popin">
+              Gas Appliance Setup
+            </div>
             <div class="gallery-description">New cooker installation.</div>
           </div>
         </a>
@@ -475,7 +497,7 @@
             <div class="flex items-center space-x-2 mb-4">
               <img src="assets/images/footerlogo.png" class="h-[140px]" />
             </div>
-            <p class="text-[16px] text-gray-300 radio mb-6 max-w-xs">
+            <p class="text-[16px] text-gray-300 popin mb-6 max-w-xs">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard.
             </p>
@@ -512,8 +534,8 @@
           </div>
 
           <div class="ml-10">
-            <h4 class="text-[24px] radio font-semibold mb-6">Quick Links</h4>
-            <ul class="space-y-3 radio text-[20px]">
+            <h4 class="text-[24px] popin font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-3 popin text-[20px]">
               <li
                 class="flex items-start text-gray-300 hover:text-red-500 transition duration-150"
               >
@@ -566,7 +588,7 @@
           </div>
 
           <div>
-            <h4 class="text-[24px] radio font-semibold mb-6">Contact Info</h4>
+            <h4 class="text-[24px] popin font-semibold mb-6">Contact Info</h4>
             <div class="space-y-4">
               <div class="flex items-start text-gray-300">
                 <i
@@ -588,13 +610,13 @@
           </div>
 
           <div>
-            <h4 class="text-[24px] radio font-semibold mb-6">Working Hours</h4>
+            <h4 class="text-[24px] popin font-semibold mb-6">Working Hours</h4>
             <div class="space-y-4">
-              <p class="text-gray-300 radio text-[18px]">
+              <p class="text-gray-300 popin text-[18px]">
                 <span class="font-semibold text-white">Monday to Friday:</span>
                 8am to 8pm
               </p>
-              <p class="text-gray-300 radio text-[18px]">
+              <p class="text-gray-300 popin text-[18px]">
                 <span class="font-semibold text-white">Saturday-Sunday:</span>
                 9am to 5pm
               </p>
@@ -602,7 +624,7 @@
           </div>
         </div>
 
-        <div class="text-center text-[18px] radio pt-8 text-gray-400">
+        <div class="text-center text-[18px] popin pt-8 text-gray-400">
           &copy; 2025 All Rights Reserved Lorem Ipsum Services
         </div>
       </div>
