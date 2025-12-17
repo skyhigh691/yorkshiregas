@@ -62,43 +62,50 @@
       <div class="w-full h-[130px] relative flex justify-center bg-[#033257]">
         <div class="w-[80%] flex justify-end">
           <div class="flex gap-5 items-center">
-            <a class="flex gap-2 popin text-white">
+            <a href="tel:+012345689" class="flex gap-2 popin text-white">
               <img src="assets/images/phone.png" class="h-5 w-5" />
               012 03456 7890
             </a>
-            <a class="flex gap-2 popin text-white">
+            <a
+              href="mailto:loremipsum@gmail.com"
+              class="flex gap-2 popin text-white"
+            >
               <img src="assets/images/email.png" class="h-5 w-5" />
               loremgmail@gmail.com
             </a>
 
             <!-- Facebook -->
 
-            <div
-              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center"
-            >
-              <i class="fa-brands fa-facebook-f text-white text-xl"></i>
+            <div class="flex gap-3">
+              <!-- Facebook -->
+              <div
+                class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center cursor-pointer transition-all duration-300 hover:bg-[#f94c2c] hover:scale-110 hover:shadow-lg"
+              >
+                <i class="fa-brands fa-facebook-f text-white text-xl"></i>
+              </div>
+
+              <!-- Instagram -->
+              <div
+                class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center cursor-pointer transition-all duration-300 hover:bg-gradient-to-tr hover:bg-[#f94c2c] hover:scale-110 hover:shadow-lg"
+              >
+                <i class="fa-brands fa-instagram text-white text-xl"></i>
+              </div>
+
+              <!-- YouTube -->
+              <div
+                class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center cursor-pointer transition-all duration-300 hover:bg-[#f94c2c] hover:scale-110 hover:shadow-lg"
+              >
+                <i class="fa-brands fa-youtube text-white text-xl"></i>
+              </div>
+
+              <!-- LinkedIn -->
+              <div
+                class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center cursor-pointer transition-all duration-300 hover:bg-[#f94c2c] hover:scale-110 hover:shadow-lg"
+              >
+                <i class="fa-brands fa-linkedin-in text-white text-xl"></i>
+              </div>
             </div>
 
-            <!-- Instagram -->
-            <div
-              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center"
-            >
-              <i class="fa-brands fa-instagram text-white text-xl"></i>
-            </div>
-
-            <!-- YouTube -->
-            <div
-              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center"
-            >
-              <i class="fa-brands fa-youtube text-white text-xl"></i>
-            </div>
-
-            <!-- LinkedIn -->
-            <div
-              class="h-10 w-10 rounded-full border border-[#f94c2c] flex justify-center items-center"
-            >
-              <i class="fa-brands fa-linkedin-in text-white text-xl"></i>
-            </div>
             <img src="assets/images/gas.png" class="h-[60px] ml-[30px]" />
           </div>
         </div>
@@ -122,12 +129,13 @@
             <a href="blog.html">BLOG</a>
           </ul>
           <div class="flex justify-end h-full w-[30%]">
-            <div
-              class="w-[250px] popin flex gap-2 text-2xl text-white justify-center items-center rounded-tr-[50px] h-full rounded-br-[50px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A]"
+            <a
+              href="tel:+441234567890"
+              class="w-[250px] popin flex gap-2 text-[20px] font-bold text-white justify-center items-center rounded-tr-[50px] h-full rounded-br-[50px] bg-gradient-to-r from-[#F94C2C] to-[#932D1A]"
             >
-              <img src="assets/images/CALLICON.png" class="h-10" />
+              <img src="assets/images/CALLICON.png" class="h-8" />
               CALL NOW
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -219,12 +227,13 @@
             </div>
 
             <!-- BUTTON -->
-            <button
+            <a
+              href="tel:+44123456789"
               class="w-[40%] px-6 popin py-3 text-white font-bold rounded-xl shadow-lg mt-8"
               style="background: linear-gradient(135deg, #f24a2b, #9e311c)"
             >
               Get your free quote now
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -384,7 +393,7 @@
         <!-- CENTER IMAGE -->
         <div class="flex justify-center rounded-full h-70 w-70">
           <img
-            src="assets/images/aboutusimage.jpg"
+            src="assets/images/manwithgas.png"
             class="w-[400px] h-[400px] rounded-full mr-[20px] border-4 border-white shadow-xl"
           />
         </div>
@@ -798,39 +807,46 @@
               industry. Lorem Ipsum has been the industry's standard.
             </p>
             <div class="flex space-x-3">
+              <!-- Facebook -->
               <div
-                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border-[#f74b2c]"
+                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border border-[#f74b2c]"
               >
-                <a href="#" class="social-icon" aria-label="Facebook"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
+                <a href="#" aria-label="Facebook" class="text-white text-sm">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
               </div>
+
+              <!-- Instagram -->
               <div
-                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border-[#f74b2c]"
+                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border border-[#f74b2c]"
               >
-                <a href="#" class="social-icon" aria-label="Facebook"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
+                <a href="#" aria-label="Instagram" class="text-white text-sm">
+                  <i class="fab fa-instagram"></i>
+                </a>
               </div>
+
+              <!-- Pinterest -->
               <div
-                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border-[#f74b2c]"
+                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border border-[#f74b2c]"
               >
-                <a href="#" class="social-icon" aria-label="Facebook"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
+                <a href="#" aria-label="Pinterest" class="text-white text-sm">
+                  <i class="fab fa-pinterest-p"></i>
+                </a>
               </div>
+
+              <!-- Twitter / X -->
               <div
-                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border-[1px] border-[#f74b2c]"
+                class="w-[30px] h-[30px] bg-black rounded-full flex justify-center items-center border border-[#f74b2c]"
               >
-                <a href="#" class="social-icon" aria-label="Facebook"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
+                <a href="#" aria-label="Twitter" class="text-white text-sm">
+                  <i class="fab fa-x-twitter"></i>
+                </a>
               </div>
             </div>
           </div>
 
           <div class="ml-10">
-            <h4 class="text-[24px] popin font-bold mb-6">Quick Links</h4>
+            <h4 class="text-[24px] popin font-semibold mb-6">Quick Links</h4>
             <ul class="space-y-3 popin text-[20px]">
               <li
                 class="flex items-start text-gray-300 hover:text-red-500 transition duration-150"
@@ -884,7 +900,7 @@
           </div>
 
           <div>
-            <h4 class="text-[24px] popin font-bold mb-6">Contact Info</h4>
+            <h4 class="text-[24px] popin font-semibold mb-6">Contact Info</h4>
             <div class="space-y-4">
               <div class="flex items-start text-gray-300">
                 <i
@@ -906,14 +922,14 @@
           </div>
 
           <div>
-            <h4 class="text-[24px] popin font-bold mb-6">Working Hours</h4>
+            <h4 class="text-[24px] popin font-semibold mb-6">Working Hours</h4>
             <div class="space-y-4">
               <p class="text-gray-300 popin text-[18px]">
-                <span class="font-bold text-white">Monday to Friday:</span>
+                <span class="font-semibold text-white">Monday to Friday:</span>
                 8am to 8pm
               </p>
               <p class="text-gray-300 popin text-[18px]">
-                <span class="font-bold text-white">Saturday-Sunday:</span>
+                <span class="font-semibold text-white">Saturday-Sunday:</span>
                 9am to 5pm
               </p>
             </div>
